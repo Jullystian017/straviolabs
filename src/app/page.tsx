@@ -10,7 +10,24 @@ import {
   Layers,
   ArrowRight,
   ChevronRight,
+  ChevronDown,
   Maximize,
+  Wallet,
+  Stethoscope,
+  GraduationCap,
+  Building2,
+  Paintbrush,
+  Code2,
+  Smartphone,
+  Layout,
+  MonitorPlay,
+  Briefcase,
+  PenTool,
+  Users,
+  BarChart,
+  Shield,
+  Handshake,
+  Newspaper,
   RotateCw,
   Scale,
   Play,
@@ -215,7 +232,7 @@ export default function Home() {
         <div className={`fixed top-0 left-0 right-0 z-50 w-full transition-all duration-500 ease-[cubic-bezier(0.23,1,0.32,1)] ${isScrolled ? "pt-4 px-4 pointer-events-none" : ""} nav-item`}>
           <nav className={`mx-auto flex items-center justify-between transition-all duration-500 pointer-events-auto ${
             isScrolled 
-              ? "max-w-[1200px] bg-white rounded-[20px] shadow-[0_8px_30px_rgb(0,0,0,0.12)] px-6 py-3 border border-slate-200/50" 
+              ? "max-w-[1050px] bg-white rounded-2xl shadow-[0_8px_30px_rgb(0,0,0,0.12)] px-6 py-2 border border-slate-200/50" 
               : "max-w-[1400px] px-8 md:px-12 py-6 bg-transparent"
           }`}>
             {/* Logo */}
@@ -227,23 +244,312 @@ export default function Home() {
             </div>
 
             {/* Links */}
-            <div className={`hidden md:flex items-center space-x-10 text-sm font-semibold transition-colors duration-300 ${isScrolled ? "text-slate-500" : "text-slate-300"}`}>
-              <a href="#platform" className={`transition ${isScrolled ? "hover:text-slate-900" : "hover:text-white"}`}>Platform</a>
-              <a href="#solutions" className={`transition ${isScrolled ? "hover:text-slate-900" : "hover:text-white"}`}>Solutions</a>
-              <a href="#pricing" className={`transition ${isScrolled ? "hover:text-slate-900" : "hover:text-white"}`}>Pricing</a>
-              <a href="#about" className={`transition ${isScrolled ? "hover:text-slate-900" : "hover:text-white"}`}>About</a>
-              <a href="#blog" className={`transition ${isScrolled ? "hover:text-slate-900" : "hover:text-white"}`}>Blog</a>
+            <div className={`hidden md:flex items-center space-x-8 text-[13px] font-semibold transition-colors duration-300 ${isScrolled ? "text-slate-600" : "text-slate-300"}`}>
+              
+              {/* Services */}
+              <div className="group relative">
+                <button className={`flex items-center gap-1.5 transition py-4 ${isScrolled ? "hover:text-slate-900" : "hover:text-white"}`}>
+                  Services <ChevronDown className="w-3.5 h-3.5 opacity-70 group-hover:rotate-180 transition-transform" />
+                </button>
+                <div className="absolute top-[85%] left-1/2 -translate-x-1/2 pt-2 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 z-50">
+                  <div className={`w-[850px] rounded-2xl p-2 flex border transition-all duration-300 ${
+                    isScrolled ? "bg-white shadow-[0_20px_40px_rgba(0,0,0,0.1)] border-slate-100 text-slate-800" : "bg-slate-900/90 backdrop-blur-md border-white/10 text-slate-200"
+                  }`}>
+                    {/* Grid Left */}
+                    <div className="flex-1 p-6">
+                      <div className={`inline-block px-3 py-1 rounded-full text-[10px] font-bold tracking-wider uppercase mb-8 ${isScrolled ? "bg-slate-100 text-slate-800" : "bg-white/10 text-white"}`}>
+                        Services
+                      </div>
+                      <div className="grid grid-cols-2 gap-x-8 gap-y-10">
+                        <a href="#" className="flex gap-4 group/item">
+                          <div className="w-11 h-11 rounded-xl bg-[#0052cc] text-white flex items-center justify-center shrink-0 shadow-md">
+                            <MonitorPlay className="w-5 h-5" />
+                          </div>
+                          <div>
+                            <h4 className={`text-sm font-bold mb-1 transition-colors ${isScrolled ? "text-slate-900 group-hover/item:text-[#0052cc]" : "text-white group-hover/item:text-blue-400"}`}>Web Design</h4>
+                            <p className={`text-xs leading-relaxed font-medium ${isScrolled ? "text-slate-500" : "text-slate-400"}`}>App & Website Design tailored for engagement</p>
+                          </div>
+                        </a>
+                        <a href="#" className="flex gap-4 group/item">
+                          <div className="w-11 h-11 rounded-xl bg-[#0052cc] text-white flex items-center justify-center shrink-0 shadow-md">
+                            <Smartphone className="w-5 h-5" />
+                          </div>
+                          <div>
+                            <h4 className={`text-sm font-bold mb-1 transition-colors ${isScrolled ? "text-slate-900 group-hover/item:text-[#0052cc]" : "text-white group-hover/item:text-blue-400"}`}>Mobile Design</h4>
+                            <p className={`text-xs leading-relaxed font-medium ${isScrolled ? "text-slate-500" : "text-slate-400"}`}>iOS & Android UI/UX experiences</p>
+                          </div>
+                        </a>
+                        <a href="#" className="flex gap-4 group/item">
+                          <div className="w-11 h-11 rounded-xl bg-[#0052cc] text-white flex items-center justify-center shrink-0 shadow-md">
+                            <Code2 className="w-5 h-5" />
+                          </div>
+                          <div>
+                            <h4 className={`text-sm font-bold mb-1 transition-colors ${isScrolled ? "text-slate-900 group-hover/item:text-[#0052cc]" : "text-white group-hover/item:text-blue-400"}`}>Web Development</h4>
+                            <p className={`text-xs leading-relaxed font-medium ${isScrolled ? "text-slate-500" : "text-slate-400"}`}>Robust full-stack Web Apps</p>
+                          </div>
+                        </a>
+                        <a href="#" className="flex gap-4 group/item">
+                          <div className="w-11 h-11 rounded-xl bg-[#0052cc] text-white flex items-center justify-center shrink-0 shadow-md">
+                            <Paintbrush className="w-5 h-5" />
+                          </div>
+                          <div>
+                            <h4 className={`text-sm font-bold mb-1 transition-colors ${isScrolled ? "text-slate-900 group-hover/item:text-[#0052cc]" : "text-white group-hover/item:text-blue-400"}`}>Branding & Redesign</h4>
+                            <p className={`text-xs leading-relaxed font-medium ${isScrolled ? "text-slate-500" : "text-slate-400"}`}>Brand Identity & aesthetic revamps</p>
+                          </div>
+                        </a>
+                      </div>
+                    </div>
+                    {/* CTA Right */}
+                    <div className="w-[260px] bg-gradient-to-b from-blue-400 to-blue-600 rounded-xl p-6 flex flex-col justify-end relative overflow-hidden group/cta cursor-pointer">
+                      <div className="absolute inset-0 bg-black/10 group-hover/cta:bg-transparent transition-colors" />
+                      <div className="absolute top-0 right-0 w-32 h-32 bg-white/20 rounded-full blur-3xl" />
+                      <div className="relative z-10 bg-white rounded-xl p-5 mt-40 shadow-lg border border-slate-100">
+                        <div className="flex items-center gap-2 mb-2">
+                          <div className="w-5 h-5 rounded bg-blue-500 text-white flex items-center justify-center"><Zap className="w-3 h-3" /></div>
+                          <span className="text-[10px] font-bold text-slate-800">AI Agent</span>
+                        </div>
+                        <p className="text-xs text-slate-500 mb-4">Hi, Anything I can help with? 😊</p>
+                        <h4 className="text-[15px] font-bold text-slate-900 mb-1 mt-4 border-t border-slate-100 pt-4">Ready to get started?</h4>
+                        <span className="text-sm font-bold text-[#0052cc] group-hover/cta:underline">Contact Us</span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              {/* Industries */}
+              <div className="group relative">
+                <button className={`flex items-center gap-1.5 transition py-4 ${isScrolled ? "hover:text-slate-900" : "hover:text-white"}`}>
+                  Industries <ChevronDown className="w-3.5 h-3.5 opacity-70 group-hover:rotate-180 transition-transform" />
+                </button>
+                <div className="absolute top-[85%] left-1/2 -translate-x-1/3 pt-2 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 z-50">
+                  <div className={`w-[850px] rounded-2xl p-2 flex border transition-all duration-300 ${
+                    isScrolled ? "bg-white shadow-[0_20px_40px_rgba(0,0,0,0.1)] border-slate-100 text-slate-800" : "bg-slate-900/90 backdrop-blur-md border-white/10 text-slate-200"
+                  }`}>
+                    {/* Grid Left */}
+                    <div className="flex-1 p-6">
+                      <div className={`inline-block px-3 py-1 rounded-full text-[10px] font-bold tracking-wider uppercase mb-8 ${isScrolled ? "bg-slate-100 text-slate-800" : "bg-white/10 text-white"}`}>
+                        Industries
+                      </div>
+                      <div className="grid grid-cols-2 gap-x-8 gap-y-10">
+                        <a href="#" className="flex gap-4 group/item">
+                          <div className="w-11 h-11 rounded-xl bg-[#0052cc] text-white flex items-center justify-center shrink-0 shadow-md">
+                            <Wallet className="w-5 h-5" />
+                          </div>
+                          <div>
+                            <h4 className={`text-sm font-bold mb-1 transition-colors ${isScrolled ? "text-slate-900 group-hover/item:text-[#0052cc]" : "text-white group-hover/item:text-blue-400"}`}>Fintech</h4>
+                            <p className={`text-xs leading-relaxed font-medium ${isScrolled ? "text-slate-500" : "text-slate-400"}`}>AI-Powered Financial Services for Smarter Customer Engagement</p>
+                          </div>
+                        </a>
+                        <a href="#" className="flex gap-4 group/item">
+                          <div className="w-11 h-11 rounded-xl bg-[#0052cc] text-white flex items-center justify-center shrink-0 shadow-md">
+                            <Stethoscope className="w-5 h-5" />
+                          </div>
+                          <div>
+                            <h4 className={`text-sm font-bold mb-1 transition-colors ${isScrolled ? "text-slate-900 group-hover/item:text-[#0052cc]" : "text-white group-hover/item:text-blue-400"}`}>Healthcare</h4>
+                            <p className={`text-xs leading-relaxed font-medium ${isScrolled ? "text-slate-500" : "text-slate-400"}`}>Redefining Patient Care with AI-Powered Healthcare Assistants</p>
+                          </div>
+                        </a>
+                        <a href="#" className="flex gap-4 group/item">
+                          <div className="w-11 h-11 rounded-xl bg-[#0052cc] text-white flex items-center justify-center shrink-0 shadow-md">
+                            <GraduationCap className="w-5 h-5" />
+                          </div>
+                          <div>
+                            <h4 className={`text-sm font-bold mb-1 transition-colors ${isScrolled ? "text-slate-900 group-hover/item:text-[#0052cc]" : "text-white group-hover/item:text-blue-400"}`}>Edtech</h4>
+                            <p className={`text-xs leading-relaxed font-medium ${isScrolled ? "text-slate-500" : "text-slate-400"}`}>Empower Learners with Smart Educational Platforms</p>
+                          </div>
+                        </a>
+                        <a href="#" className="flex gap-4 group/item">
+                          <div className="w-11 h-11 rounded-xl bg-[#0052cc] text-white flex items-center justify-center shrink-0 shadow-md">
+                            <Building2 className="w-5 h-5" />
+                          </div>
+                          <div>
+                            <h4 className={`text-sm font-bold mb-1 transition-colors ${isScrolled ? "text-slate-900 group-hover/item:text-[#0052cc]" : "text-white group-hover/item:text-blue-400"}`}>Government</h4>
+                            <p className={`text-xs leading-relaxed font-medium ${isScrolled ? "text-slate-500" : "text-slate-400"}`}>Smart AI Solutions for Efficient Public Services</p>
+                          </div>
+                        </a>
+                      </div>
+                    </div>
+                    {/* CTA Right */}
+                    <div className="w-[260px] bg-gradient-to-b from-blue-400 to-blue-600 rounded-xl p-6 flex flex-col justify-end relative overflow-hidden group/cta cursor-pointer">
+                      <div className="absolute inset-0 bg-black/10 group-hover/cta:bg-transparent transition-colors" />
+                      <div className="absolute top-0 right-0 w-32 h-32 bg-white/20 rounded-full blur-3xl" />
+                      
+                      <div className="relative z-10 bg-white rounded-xl p-5 mt-40 shadow-lg border border-slate-100">
+                        <div className="flex items-center gap-2 mb-2">
+                          <div className="w-5 h-5 rounded bg-blue-500 text-white flex items-center justify-center"><Zap className="w-3 h-3" /></div>
+                          <span className="text-[10px] font-bold text-slate-800">AI Agent</span>
+                        </div>
+                        <p className="text-xs text-slate-500 mb-4">Hi, Anything I can help with? 😊</p>
+                        <h4 className="text-[15px] font-bold text-slate-900 mb-1 mt-4 border-t border-slate-100 pt-4">Ready to get started?</h4>
+                        <span className="text-sm font-bold text-[#0052cc] group-hover/cta:underline">Contact Us</span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              {/* Products */}
+              <div className="group relative">
+                <button className={`flex items-center gap-1.5 transition py-4 ${isScrolled ? "hover:text-slate-900" : "hover:text-white"}`}>
+                  Products <ChevronDown className="w-3.5 h-3.5 opacity-70 group-hover:rotate-180 transition-transform" />
+                </button>
+                <div className="absolute top-[85%] left-1/2 -translate-x-1/2 pt-2 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 z-50">
+                  <div className={`w-[850px] rounded-2xl p-2 flex border transition-all duration-300 ${
+                    isScrolled ? "bg-white shadow-[0_20px_40px_rgba(0,0,0,0.1)] border-slate-100 text-slate-800" : "bg-slate-900/90 backdrop-blur-md border-white/10 text-slate-200"
+                  }`}>
+                    {/* Grid Left */}
+                    <div className="flex-1 p-6">
+                      <div className={`inline-block px-3 py-1 rounded-full text-[10px] font-bold tracking-wider uppercase mb-8 ${isScrolled ? "bg-slate-100 text-slate-800" : "bg-white/10 text-white"}`}>
+                        Products
+                      </div>
+                      <div className="grid grid-cols-2 gap-x-8 gap-y-10">
+                        <a href="#" className="flex gap-4 group/item">
+                          <div className="w-11 h-11 rounded-xl bg-[#0052cc] text-white flex items-center justify-center shrink-0 shadow-md">
+                            <Layers className="w-5 h-5" />
+                          </div>
+                          <div>
+                            <h4 className={`text-sm font-bold mb-1 transition-colors ${isScrolled ? "text-slate-900 group-hover/item:text-[#0052cc]" : "text-white group-hover/item:text-blue-400"}`}>Core Platform</h4>
+                            <p className={`text-xs leading-relaxed font-medium ${isScrolled ? "text-slate-500" : "text-slate-400"}`}>Enterprise AI Infrastructure</p>
+                          </div>
+                        </a>
+                        <a href="#" className="flex gap-4 group/item">
+                          <div className="w-11 h-11 rounded-xl bg-[#0052cc] text-white flex items-center justify-center shrink-0 shadow-md">
+                            <Zap className="w-5 h-5" />
+                          </div>
+                          <div>
+                            <h4 className={`text-sm font-bold mb-1 transition-colors ${isScrolled ? "text-slate-900 group-hover/item:text-[#0052cc]" : "text-white group-hover/item:text-blue-400"}`}>Integrations API</h4>
+                            <p className={`text-xs leading-relaxed font-medium ${isScrolled ? "text-slate-500" : "text-slate-400"}`}>Seamless Third-Party Sync</p>
+                          </div>
+                        </a>
+                        <a href="#" className="flex gap-4 group/item">
+                          <div className="w-11 h-11 rounded-xl bg-[#0052cc] text-white flex items-center justify-center shrink-0 shadow-md">
+                            <BarChart className="w-5 h-5" />
+                          </div>
+                          <div>
+                            <h4 className={`text-sm font-bold mb-1 transition-colors ${isScrolled ? "text-slate-900 group-hover/item:text-[#0052cc]" : "text-white group-hover/item:text-blue-400"}`}>Data Analytics</h4>
+                            <p className={`text-xs leading-relaxed font-medium ${isScrolled ? "text-slate-500" : "text-slate-400"}`}>Real-time Insights & Reporting</p>
+                          </div>
+                        </a>
+                        <a href="#" className="flex gap-4 group/item">
+                          <div className="w-11 h-11 rounded-xl bg-[#0052cc] text-white flex items-center justify-center shrink-0 shadow-md">
+                            <Shield className="w-5 h-5" />
+                          </div>
+                          <div>
+                            <h4 className={`text-sm font-bold mb-1 transition-colors ${isScrolled ? "text-slate-900 group-hover/item:text-[#0052cc]" : "text-white group-hover/item:text-blue-400"}`}>Security Hub</h4>
+                            <p className={`text-xs leading-relaxed font-medium ${isScrolled ? "text-slate-500" : "text-slate-400"}`}>Advanced Threat Protection</p>
+                          </div>
+                        </a>
+                      </div>
+                    </div>
+                    {/* CTA Right */}
+                    <div className="w-[260px] bg-gradient-to-b from-blue-400 to-blue-600 rounded-xl p-6 flex flex-col justify-end relative overflow-hidden group/cta cursor-pointer">
+                      <div className="absolute inset-0 bg-black/10 group-hover/cta:bg-transparent transition-colors" />
+                      <div className="absolute top-0 right-0 w-32 h-32 bg-white/20 rounded-full blur-3xl" />
+                      <div className="relative z-10 bg-white rounded-xl p-5 mt-40 shadow-lg border border-slate-100">
+                        <div className="flex items-center gap-2 mb-2">
+                          <div className="w-5 h-5 rounded bg-blue-500 text-white flex items-center justify-center"><Zap className="w-3 h-3" /></div>
+                          <span className="text-[10px] font-bold text-slate-800">AI Agent</span>
+                        </div>
+                        <p className="text-xs text-slate-500 mb-4">Hi, Anything I can help with? 😊</p>
+                        <h4 className="text-[15px] font-bold text-slate-900 mb-1 mt-4 border-t border-slate-100 pt-4">Ready to get started?</h4>
+                        <span className="text-sm font-bold text-[#0052cc] group-hover/cta:underline">Contact Us</span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              {/* Case Studies */}
+              <a href="#case-studies" className={`transition py-4 ${isScrolled ? "hover:text-slate-900" : "hover:text-white"}`}>
+                Case Studies
+              </a>
+
+              {/* Company */}
+              <div className="group relative">
+                <button className={`flex items-center gap-1.5 transition py-4 ${isScrolled ? "hover:text-slate-900" : "hover:text-white"}`}>
+                  Company <ChevronDown className="w-3.5 h-3.5 opacity-70 group-hover:rotate-180 transition-transform" />
+                </button>
+                <div className="absolute top-[85%] left-1/2 -translate-x-3/4 pt-2 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 z-50">
+                  <div className={`w-[850px] rounded-2xl p-2 flex border transition-all duration-300 ${
+                    isScrolled ? "bg-white shadow-[0_20px_40px_rgba(0,0,0,0.1)] border-slate-100 text-slate-800" : "bg-slate-900/90 backdrop-blur-md border-white/10 text-slate-200"
+                  }`}>
+                    {/* Grid Left */}
+                    <div className="flex-1 p-6">
+                      <div className={`inline-block px-3 py-1 rounded-full text-[10px] font-bold tracking-wider uppercase mb-8 ${isScrolled ? "bg-slate-100 text-slate-800" : "bg-white/10 text-white"}`}>
+                        Company
+                      </div>
+                      <div className="grid grid-cols-2 gap-x-8 gap-y-10">
+                        <a href="#" className="flex gap-4 group/item">
+                          <div className="w-11 h-11 rounded-xl bg-[#0052cc] text-white flex items-center justify-center shrink-0 shadow-md">
+                            <Users className="w-5 h-5" />
+                          </div>
+                          <div>
+                            <h4 className={`text-sm font-bold mb-1 transition-colors ${isScrolled ? "text-slate-900 group-hover/item:text-[#0052cc]" : "text-white group-hover/item:text-blue-400"}`}>About Us</h4>
+                            <p className={`text-xs leading-relaxed font-medium ${isScrolled ? "text-slate-500" : "text-slate-400"}`}>Our story and mission</p>
+                          </div>
+                        </a>
+                        <a href="#" className="flex gap-4 group/item">
+                          <div className="w-11 h-11 rounded-xl bg-[#0052cc] text-white flex items-center justify-center shrink-0 shadow-md">
+                            <Briefcase className="w-5 h-5" />
+                          </div>
+                          <div>
+                            <h4 className={`text-sm font-bold mb-1 transition-colors ${isScrolled ? "text-slate-900 group-hover/item:text-[#0052cc]" : "text-white group-hover/item:text-blue-400"}`}>Careers</h4>
+                            <p className={`text-xs leading-relaxed font-medium ${isScrolled ? "text-slate-500" : "text-slate-400"}`}>Join our growing team</p>
+                          </div>
+                        </a>
+                        <a href="#" className="flex gap-4 group/item">
+                          <div className="w-11 h-11 rounded-xl bg-[#0052cc] text-white flex items-center justify-center shrink-0 shadow-md">
+                            <Handshake className="w-5 h-5" />
+                          </div>
+                          <div>
+                            <h4 className={`text-sm font-bold mb-1 transition-colors ${isScrolled ? "text-slate-900 group-hover/item:text-[#0052cc]" : "text-white group-hover/item:text-blue-400"}`}>Partnership</h4>
+                            <p className={`text-xs leading-relaxed font-medium ${isScrolled ? "text-slate-500" : "text-slate-400"}`}>Grow together with us</p>
+                          </div>
+                        </a>
+                        <a href="#" className="flex gap-4 group/item">
+                          <div className="w-11 h-11 rounded-xl bg-[#0052cc] text-white flex items-center justify-center shrink-0 shadow-md">
+                            <Newspaper className="w-5 h-5" />
+                          </div>
+                          <div>
+                            <h4 className={`text-sm font-bold mb-1 transition-colors ${isScrolled ? "text-slate-900 group-hover/item:text-[#0052cc]" : "text-white group-hover/item:text-blue-400"}`}>Blog & News</h4>
+                            <p className={`text-xs leading-relaxed font-medium ${isScrolled ? "text-slate-500" : "text-slate-400"}`}>Latest updates and articles</p>
+                          </div>
+                        </a>
+                      </div>
+                    </div>
+                    {/* CTA Right */}
+                    <div className="w-[260px] bg-gradient-to-b from-blue-400 to-blue-600 rounded-xl p-6 flex flex-col justify-end relative overflow-hidden group/cta cursor-pointer">
+                      <div className="absolute inset-0 bg-black/10 group-hover/cta:bg-transparent transition-colors" />
+                      <div className="absolute top-0 right-0 w-32 h-32 bg-white/20 rounded-full blur-3xl" />
+                      <div className="relative z-10 bg-white rounded-xl p-5 mt-40 shadow-lg border border-slate-100">
+                        <div className="flex items-center gap-2 mb-2">
+                          <div className="w-5 h-5 rounded bg-blue-500 text-white flex items-center justify-center"><Zap className="w-3 h-3" /></div>
+                          <span className="text-[10px] font-bold text-slate-800">AI Agent</span>
+                        </div>
+                        <p className="text-xs text-slate-500 mb-4">Hi, Anything I can help with? 😊</p>
+                        <h4 className="text-[15px] font-bold text-slate-900 mb-1 mt-4 border-t border-slate-100 pt-4">Ready to get started?</h4>
+                        <span className="text-sm font-bold text-[#0052cc] group-hover/cta:underline">Contact Us</span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              {/* Contact Us */}
+              <a href="#contact" className={`transition py-4 ${isScrolled ? "hover:text-slate-900" : "hover:text-white"}`}>
+                Contact Us
+              </a>
             </div>
 
             {/* CTA */}
             <div>
               <a
                 href="#contact"
-                className={`px-6 py-2.5 text-xs font-bold tracking-wider rounded transition-all flex items-center gap-2 ${
-                  isScrolled 
-                    ? "text-white bg-slate-900 hover:bg-slate-800" 
+                className={`px-6 py-2.5 text-xs font-bold tracking-wider rounded transition-all flex items-center gap-2 ${isScrolled
+                    ? "text-white bg-slate-900 hover:bg-slate-800"
                     : "text-slate-200 bg-white/5 border border-white/10 hover:bg-white/10"
-                }`}
+                  }`}
               >
                 CONTACT US <ArrowRight className={`w-3.5 h-3.5 transition-opacity ${isScrolled ? "opacity-100" : "opacity-70"}`} />
               </a>

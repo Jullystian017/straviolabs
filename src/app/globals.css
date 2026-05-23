@@ -68,9 +68,11 @@ body {
 .bg-glow-primary {
   background: var(--primary-glow);
 }
+
 .bg-glow-secondary {
   background: var(--secondary-glow);
 }
+
 .bg-glow-tertiary {
   background: var(--tertiary-glow);
 }
@@ -90,23 +92,28 @@ body {
   box-shadow: 0 16px 40px 0 rgba(139, 92, 246, 0.12);
 }
 
-/* Custom animated plus pattern */
+/* Custom animated grid pattern */
 .grid-bg {
-  background-image: url("data:image/svg+xml,%3Csvg width='20' height='20' viewBox='0 0 20 20' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M10 7 L10 13 M7 10 L13 10' stroke='rgba(0, 0, 0, 0.9)' stroke-width='1' stroke-linecap='round' fill='none' /%3E%3C/svg%3E");
-  background-size: 20px 20px;
+  background-image:
+    linear-gradient(to right, rgba(255, 255, 255, 0.02) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(255, 255, 255, 0.02) 1px, transparent 1px);
+  background-size: 40px 40px;
 }
 
 /* Smooth Custom Scrollbar */
 ::-webkit-scrollbar {
   width: 6px;
 }
+
 ::-webkit-scrollbar-track {
   background: #040209;
 }
+
 ::-webkit-scrollbar-thumb {
   background: rgba(255, 255, 255, 0.1);
   border-radius: 10px;
 }
+
 ::-webkit-scrollbar-thumb:hover {
   background: #8b5cf6;
 }
@@ -269,9 +276,11 @@ body {
   * {
     @apply border-border outline-ring/50;
   }
+
   body {
     @apply bg-background text-foreground;
   }
+
   html {
     @apply font-sans;
   }
