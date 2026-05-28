@@ -18,6 +18,16 @@ import {
   Building2,
   Paintbrush,
   Code2,
+  Command,
+  Hexagon,
+  Triangle,
+  Infinity,
+  Feather,
+  LineChart,
+  Lock,
+  Globe,
+  Terminal,
+  TrendingUp,
   Smartphone,
   Layout,
   MonitorPlay,
@@ -76,6 +86,7 @@ export default function Home() {
   const cubeRef = useRef<HTMLDivElement>(null);
   const [activeAnimation, setActiveAnimation] = useState<string>("none");
   const [isScrolled, setIsScrolled] = useState(false);
+  const [openFaqIndex, setOpenFaqIndex] = useState<number | null>(0);
 
   useEffect(() => {
     const handleScroll = () => {
@@ -227,7 +238,7 @@ export default function Home() {
           <nav className={`mx-auto flex items-center justify-between transition-all duration-500 pointer-events-auto ${
             isScrolled 
               ? "max-w-[1050px] bg-white rounded-2xl shadow-[0_8px_30px_rgb(0,0,0,0.12)] px-6 py-2 border border-slate-200/50" 
-              : "max-w-[1400px] px-8 md:px-12 py-6 bg-transparent"
+              : "max-w-[1200px] px-8 md:px-12 py-6 bg-transparent"
           }`}>
             {/* Logo */}
             <div className="flex items-center space-x-3">
@@ -297,78 +308,6 @@ export default function Home() {
                     <div className="w-[260px] bg-gradient-to-b from-blue-400 to-blue-600 rounded-xl p-6 flex flex-col justify-end relative overflow-hidden group/cta cursor-pointer">
                       <div className="absolute inset-0 bg-black/10 group-hover/cta:bg-transparent transition-colors" />
                       <div className="absolute top-0 right-0 w-32 h-32 bg-white/20 rounded-full blur-3xl" />
-                      <div className="relative z-10 bg-white rounded-xl p-5 mt-40 shadow-lg border border-slate-100">
-                        <div className="flex items-center gap-2 mb-2">
-                          <div className="w-5 h-5 rounded bg-blue-500 text-white flex items-center justify-center"><Zap className="w-3 h-3" /></div>
-                          <span className="text-[10px] font-bold text-slate-800">AI Agent</span>
-                        </div>
-                        <p className="text-xs text-slate-500 mb-4">Hi, Anything I can help with? 😊</p>
-                        <h4 className="text-[15px] font-bold text-slate-900 mb-1 mt-4 border-t border-slate-100 pt-4">Ready to get started?</h4>
-                        <span className="text-sm font-bold text-[#0052cc] group-hover/cta:underline">Contact Us</span>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-
-              {/* Industries */}
-              <div className="group relative">
-                <button className={`flex items-center gap-1.5 transition py-4 ${isScrolled ? "hover:text-slate-900" : "hover:text-white"}`}>
-                  Industries <ChevronDown className="w-3.5 h-3.5 opacity-70 group-hover:rotate-180 transition-transform" />
-                </button>
-                <div className="absolute top-[85%] left-1/2 -translate-x-1/3 pt-2 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 z-50">
-                  <div className={`w-[850px] rounded-2xl p-2 flex border transition-all duration-300 ${
-                    isScrolled ? "bg-white shadow-[0_20px_40px_rgba(0,0,0,0.1)] border-slate-100 text-slate-800" : "bg-slate-900/90 backdrop-blur-md border-white/10 text-slate-200"
-                  }`}>
-                    {/* Grid Left */}
-                    <div className="flex-1 p-6">
-                      <div className={`inline-block px-3 py-1 rounded-full text-[10px] font-bold tracking-wider uppercase mb-8 ${isScrolled ? "bg-slate-100 text-slate-800" : "bg-white/10 text-white"}`}>
-                        Industries
-                      </div>
-                      <div className="grid grid-cols-2 gap-x-8 gap-y-10">
-                        <a href="#" className="flex gap-4 group/item">
-                          <div className="w-11 h-11 rounded-xl bg-[#0052cc] text-white flex items-center justify-center shrink-0 shadow-md">
-                            <Wallet className="w-5 h-5" />
-                          </div>
-                          <div>
-                            <h4 className={`text-sm font-bold mb-1 transition-colors ${isScrolled ? "text-slate-900 group-hover/item:text-[#0052cc]" : "text-white group-hover/item:text-blue-400"}`}>Fintech</h4>
-                            <p className={`text-xs leading-relaxed font-medium ${isScrolled ? "text-slate-500" : "text-slate-400"}`}>AI-Powered Financial Services for Smarter Customer Engagement</p>
-                          </div>
-                        </a>
-                        <a href="#" className="flex gap-4 group/item">
-                          <div className="w-11 h-11 rounded-xl bg-[#0052cc] text-white flex items-center justify-center shrink-0 shadow-md">
-                            <Stethoscope className="w-5 h-5" />
-                          </div>
-                          <div>
-                            <h4 className={`text-sm font-bold mb-1 transition-colors ${isScrolled ? "text-slate-900 group-hover/item:text-[#0052cc]" : "text-white group-hover/item:text-blue-400"}`}>Healthcare</h4>
-                            <p className={`text-xs leading-relaxed font-medium ${isScrolled ? "text-slate-500" : "text-slate-400"}`}>Redefining Patient Care with AI-Powered Healthcare Assistants</p>
-                          </div>
-                        </a>
-                        <a href="#" className="flex gap-4 group/item">
-                          <div className="w-11 h-11 rounded-xl bg-[#0052cc] text-white flex items-center justify-center shrink-0 shadow-md">
-                            <GraduationCap className="w-5 h-5" />
-                          </div>
-                          <div>
-                            <h4 className={`text-sm font-bold mb-1 transition-colors ${isScrolled ? "text-slate-900 group-hover/item:text-[#0052cc]" : "text-white group-hover/item:text-blue-400"}`}>Edtech</h4>
-                            <p className={`text-xs leading-relaxed font-medium ${isScrolled ? "text-slate-500" : "text-slate-400"}`}>Empower Learners with Smart Educational Platforms</p>
-                          </div>
-                        </a>
-                        <a href="#" className="flex gap-4 group/item">
-                          <div className="w-11 h-11 rounded-xl bg-[#0052cc] text-white flex items-center justify-center shrink-0 shadow-md">
-                            <Building2 className="w-5 h-5" />
-                          </div>
-                          <div>
-                            <h4 className={`text-sm font-bold mb-1 transition-colors ${isScrolled ? "text-slate-900 group-hover/item:text-[#0052cc]" : "text-white group-hover/item:text-blue-400"}`}>Government</h4>
-                            <p className={`text-xs leading-relaxed font-medium ${isScrolled ? "text-slate-500" : "text-slate-400"}`}>Smart AI Solutions for Efficient Public Services</p>
-                          </div>
-                        </a>
-                      </div>
-                    </div>
-                    {/* CTA Right */}
-                    <div className="w-[260px] bg-gradient-to-b from-blue-400 to-blue-600 rounded-xl p-6 flex flex-col justify-end relative overflow-hidden group/cta cursor-pointer">
-                      <div className="absolute inset-0 bg-black/10 group-hover/cta:bg-transparent transition-colors" />
-                      <div className="absolute top-0 right-0 w-32 h-32 bg-white/20 rounded-full blur-3xl" />
-                      
                       <div className="relative z-10 bg-white rounded-xl p-5 mt-40 shadow-lg border border-slate-100">
                         <div className="flex items-center gap-2 mb-2">
                           <div className="w-5 h-5 rounded bg-blue-500 text-white flex items-center justify-center"><Zap className="w-3 h-3" /></div>
@@ -459,76 +398,10 @@ export default function Home() {
                 Case Studies
               </a>
 
-              {/* Company */}
-              <div className="group relative">
-                <button className={`flex items-center gap-1.5 transition py-4 ${isScrolled ? "hover:text-slate-900" : "hover:text-white"}`}>
-                  Company <ChevronDown className="w-3.5 h-3.5 opacity-70 group-hover:rotate-180 transition-transform" />
-                </button>
-                <div className="absolute top-[85%] left-1/2 -translate-x-3/4 pt-2 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 z-50">
-                  <div className={`w-[850px] rounded-2xl p-2 flex border transition-all duration-300 ${
-                    isScrolled ? "bg-white shadow-[0_20px_40px_rgba(0,0,0,0.1)] border-slate-100 text-slate-800" : "bg-slate-900/90 backdrop-blur-md border-white/10 text-slate-200"
-                  }`}>
-                    {/* Grid Left */}
-                    <div className="flex-1 p-6">
-                      <div className={`inline-block px-3 py-1 rounded-full text-[10px] font-bold tracking-wider uppercase mb-8 ${isScrolled ? "bg-slate-100 text-slate-800" : "bg-white/10 text-white"}`}>
-                        Company
-                      </div>
-                      <div className="grid grid-cols-2 gap-x-8 gap-y-10">
-                        <a href="#" className="flex gap-4 group/item">
-                          <div className="w-11 h-11 rounded-xl bg-[#0052cc] text-white flex items-center justify-center shrink-0 shadow-md">
-                            <Users className="w-5 h-5" />
-                          </div>
-                          <div>
-                            <h4 className={`text-sm font-bold mb-1 transition-colors ${isScrolled ? "text-slate-900 group-hover/item:text-[#0052cc]" : "text-white group-hover/item:text-blue-400"}`}>About Us</h4>
-                            <p className={`text-xs leading-relaxed font-medium ${isScrolled ? "text-slate-500" : "text-slate-400"}`}>Our story and mission</p>
-                          </div>
-                        </a>
-                        <a href="#" className="flex gap-4 group/item">
-                          <div className="w-11 h-11 rounded-xl bg-[#0052cc] text-white flex items-center justify-center shrink-0 shadow-md">
-                            <Briefcase className="w-5 h-5" />
-                          </div>
-                          <div>
-                            <h4 className={`text-sm font-bold mb-1 transition-colors ${isScrolled ? "text-slate-900 group-hover/item:text-[#0052cc]" : "text-white group-hover/item:text-blue-400"}`}>Careers</h4>
-                            <p className={`text-xs leading-relaxed font-medium ${isScrolled ? "text-slate-500" : "text-slate-400"}`}>Join our growing team</p>
-                          </div>
-                        </a>
-                        <a href="#" className="flex gap-4 group/item">
-                          <div className="w-11 h-11 rounded-xl bg-[#0052cc] text-white flex items-center justify-center shrink-0 shadow-md">
-                            <Handshake className="w-5 h-5" />
-                          </div>
-                          <div>
-                            <h4 className={`text-sm font-bold mb-1 transition-colors ${isScrolled ? "text-slate-900 group-hover/item:text-[#0052cc]" : "text-white group-hover/item:text-blue-400"}`}>Partnership</h4>
-                            <p className={`text-xs leading-relaxed font-medium ${isScrolled ? "text-slate-500" : "text-slate-400"}`}>Grow together with us</p>
-                          </div>
-                        </a>
-                        <a href="#" className="flex gap-4 group/item">
-                          <div className="w-11 h-11 rounded-xl bg-[#0052cc] text-white flex items-center justify-center shrink-0 shadow-md">
-                            <Newspaper className="w-5 h-5" />
-                          </div>
-                          <div>
-                            <h4 className={`text-sm font-bold mb-1 transition-colors ${isScrolled ? "text-slate-900 group-hover/item:text-[#0052cc]" : "text-white group-hover/item:text-blue-400"}`}>Blog & News</h4>
-                            <p className={`text-xs leading-relaxed font-medium ${isScrolled ? "text-slate-500" : "text-slate-400"}`}>Latest updates and articles</p>
-                          </div>
-                        </a>
-                      </div>
-                    </div>
-                    {/* CTA Right */}
-                    <div className="w-[260px] bg-gradient-to-b from-blue-400 to-blue-600 rounded-xl p-6 flex flex-col justify-end relative overflow-hidden group/cta cursor-pointer">
-                      <div className="absolute inset-0 bg-black/10 group-hover/cta:bg-transparent transition-colors" />
-                      <div className="absolute top-0 right-0 w-32 h-32 bg-white/20 rounded-full blur-3xl" />
-                      <div className="relative z-10 bg-white rounded-xl p-5 mt-40 shadow-lg border border-slate-100">
-                        <div className="flex items-center gap-2 mb-2">
-                          <div className="w-5 h-5 rounded bg-blue-500 text-white flex items-center justify-center"><Zap className="w-3 h-3" /></div>
-                          <span className="text-[10px] font-bold text-slate-800">AI Agent</span>
-                        </div>
-                        <p className="text-xs text-slate-500 mb-4">Hi, Anything I can help with? 😊</p>
-                        <h4 className="text-[15px] font-bold text-slate-900 mb-1 mt-4 border-t border-slate-100 pt-4">Ready to get started?</h4>
-                        <span className="text-sm font-bold text-[#0052cc] group-hover/cta:underline">Contact Us</span>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
+              {/* About */}
+              <a href="#about" className={`transition py-4 ${isScrolled ? "hover:text-slate-900" : "hover:text-white"}`}>
+                About
+              </a>
 
               {/* Contact Us */}
               <a href="#contact" className={`transition py-4 ${isScrolled ? "hover:text-slate-900" : "hover:text-white"}`}>
@@ -552,7 +425,7 @@ export default function Home() {
         </div>
 
         {/* Hero Section */}
-        <header className="relative z-10 flex-1 flex flex-col justify-center mx-auto max-w-[1400px] w-full px-8 md:px-12 pt-32 pb-0">
+        <header className="relative z-10 flex-1 flex flex-col justify-center mx-auto max-w-[1200px] w-full px-8 md:px-12 pt-32 pb-0">
 
           {/* Two Column Layout */}
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-8 items-center mb-16">
@@ -702,6 +575,28 @@ export default function Home() {
       {/* Clean light theme sections */}
       <div className="relative bg-white text-slate-900 py-32 px-6 md:px-12 z-30">
         
+
+        {/* Trusted By Marquee Section */}
+        <section className="max-w-[1200px] mx-auto mb-32 border-b border-slate-100 pb-20 overflow-hidden">
+          <p className="text-center text-xs font-semibold text-slate-400 uppercase tracking-[0.2em] mb-10">
+            Trusted by innovative teams worldwide
+          </p>
+          <div className="relative w-full flex items-center justify-center h-12">
+            <div className="absolute inset-y-0 left-0 w-32 bg-gradient-to-r from-white to-transparent z-10 pointer-events-none" />
+            <div className="absolute inset-y-0 right-0 w-32 bg-gradient-to-l from-white to-transparent z-10 pointer-events-none" />
+            <div className="flex items-center gap-16 animate-marquee whitespace-nowrap opacity-60 grayscale">
+              {[...Array(3)].map((_, i) => (
+                <div key={i} className="flex items-center gap-16 shrink-0 px-8">
+                  <div className="flex items-center gap-2 text-xl font-bold font-sans tracking-tight text-slate-800"><Command className="w-6 h-6 text-slate-500" /> Acme Corp</div>
+                  <div className="flex items-center gap-2 text-xl font-bold font-sans tracking-tight text-slate-800"><Hexagon className="w-6 h-6 text-slate-500" /> Nexus</div>
+                  <div className="flex items-center gap-2 text-xl font-bold font-sans tracking-tight text-slate-800"><Triangle className="w-6 h-6 text-slate-500" /> Zenith</div>
+                  <div className="flex items-center gap-2 text-xl font-bold font-sans tracking-tight text-slate-800"><Infinity className="w-6 h-6 text-slate-500" /> Omni</div>
+                  <div className="flex items-center gap-2 text-xl font-bold font-sans tracking-tight text-slate-800"><Feather className="w-6 h-6 text-slate-500" /> Stratus</div>
+                </div>
+              ))}
+            </div>
+          </div>
+        </section>
         {/* The Problem Section */}
         <section className="max-w-[1200px] mx-auto mb-32">
           {/* Subtitle */}
@@ -776,7 +671,7 @@ export default function Home() {
             {/* Right Panel: Solution (Blue Gradient Grid) */}
             <div className="absolute inset-y-0 right-0 w-1/2 bg-gradient-to-br from-blue-500 via-blue-600 to-indigo-800 overflow-hidden flex items-center z-10">
               {/* Plus grid background overlay */}
-              <div className="absolute inset-0 grid-bg opacity-20 pointer-events-none" />
+              <div className="absolute inset-0 grid-bg opacity-40 pointer-events-none" />
 
               {/* Marquee Track for Solutions */}
               <div className="animate-marquee-reverse flex items-center">
@@ -906,7 +801,173 @@ export default function Home() {
 
           </div>
 
-          {/* CTA bottom button */}
+  
+
+        {/* Services Section */}
+        <section className="max-w-[1200px] mx-auto pb-32">
+          {/* Subtitle */}
+          <div className="text-center mb-4">
+            <span className="text-[11px] font-extrabold tracking-[0.2em] text-[#0052cc] uppercase">
+              Our Services
+            </span>
+          </div>
+          
+          {/* Heading */}
+          <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold tracking-tight text-center text-slate-950 mb-16 font-sans">
+            End-to-end <span className="text-[#0052cc]">Solutions</span>
+          </h2>
+
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+            {/* Service 1 */}
+            <div className="bg-white border border-slate-200/80 rounded-[2rem] p-8 shadow-[0_4px_20px_rgba(0,0,0,0.03)] hover:shadow-[0_8px_30px_rgba(0,82,204,0.08)] transition-all duration-300 group">
+              <div className="w-12 h-12 rounded-2xl bg-blue-50 text-blue-600 flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300">
+                <MonitorPlay className="w-6 h-6" />
+              </div>
+              <h3 className="text-xl font-bold text-slate-900 mb-3">Web Design</h3>
+              <p className="text-slate-500 leading-relaxed text-sm">
+                We craft beautiful, high-converting landing pages and robust web applications tailored to your specific business needs.
+              </p>
+            </div>
+
+            {/* Service 2 */}
+            <div className="bg-white border border-slate-200/80 rounded-[2rem] p-8 shadow-[0_4px_20px_rgba(0,0,0,0.03)] hover:shadow-[0_8px_30px_rgba(0,82,204,0.08)] transition-all duration-300 group">
+              <div className="w-12 h-12 rounded-2xl bg-blue-50 text-blue-600 flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300">
+                <Smartphone className="w-6 h-6" />
+              </div>
+              <h3 className="text-xl font-bold text-slate-900 mb-3">Mobile Design</h3>
+              <p className="text-slate-500 leading-relaxed text-sm">
+                Intuitive iOS and Android applications with flawless user experiences that keep your audience engaged on the go.
+              </p>
+            </div>
+
+            {/* Service 3 */}
+            <div className="bg-white border border-slate-200/80 rounded-[2rem] p-8 shadow-[0_4px_20px_rgba(0,0,0,0.03)] hover:shadow-[0_8px_30px_rgba(0,82,204,0.08)] transition-all duration-300 group">
+              <div className="w-12 h-12 rounded-2xl bg-blue-50 text-blue-600 flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300">
+                <Code2 className="w-6 h-6" />
+              </div>
+              <h3 className="text-xl font-bold text-slate-900 mb-3">AI Integration</h3>
+              <p className="text-slate-500 leading-relaxed text-sm">
+                Seamlessly connect cutting-edge AI models into your existing workflows to automate tasks and unlock new capabilities.
+              </p>
+            </div>
+          </div>
+        </section>
+
+        {/* Case Studies Section */}
+        <section className="max-w-[1200px] mx-auto pb-32">
+          {/* Subtitle */}
+          <div className="text-center mb-4">
+            <span className="text-[11px] font-extrabold tracking-[0.2em] text-[#0052cc] uppercase">
+              Case Studies
+            </span>
+          </div>
+          
+          {/* Heading */}
+          <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold tracking-tight text-center text-slate-950 mb-16 font-sans">
+            Proven <span className="text-[#0052cc]">Results</span>
+          </h2>
+
+          <div className="bg-white border border-slate-200/80 rounded-[2.5rem] shadow-[0_4px_20px_rgba(0,0,0,0.03)] overflow-hidden flex flex-col md:flex-row">
+            {/* Left: Visual/Graphic */}
+            <div className="md:w-1/2 bg-slate-50 p-12 relative flex items-center justify-center border-b md:border-b-0 md:border-r border-slate-200/80">
+              <div className="absolute inset-0 grid-bg-light opacity-60 pointer-events-none" />
+              
+              <div className="relative z-10 w-full max-w-sm bg-white rounded-2xl shadow-lg border border-slate-200 p-6">
+                 <div className="flex items-center gap-3 mb-6">
+                   <div className="w-10 h-10 rounded-full bg-slate-100 flex items-center justify-center">
+                     <Wallet className="w-5 h-5 text-slate-600" />
+                   </div>
+                   <div>
+                     <div className="font-bold text-slate-900 text-sm">FintechCorp</div>
+                     <div className="text-xs text-slate-500">Financial Services</div>
+                   </div>
+                 </div>
+                 <div className="space-y-3">
+                   <div className="h-2 bg-slate-100 rounded-full w-full"></div>
+                   <div className="h-2 bg-slate-100 rounded-full w-4/5"></div>
+                   <div className="h-2 bg-slate-100 rounded-full w-2/3"></div>
+                 </div>
+                 <div className="mt-6 pt-6 border-t border-slate-100 flex justify-between items-center">
+                   <div className="text-3xl font-extrabold text-blue-600">+300%</div>
+                   <div className="text-xs font-semibold text-slate-500 uppercase tracking-wider">Conversion</div>
+                 </div>
+              </div>
+            </div>
+
+            {/* Right: Content */}
+            <div className="md:w-1/2 p-12 md:p-16 flex flex-col justify-center">
+              <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-blue-50 text-blue-600 text-xs font-bold mb-6 w-fit">
+                <TrendingUp className="w-4 h-4" /> Success Story
+              </div>
+              <h3 className="text-3xl font-bold text-slate-900 mb-4">
+                How FintechCorp automated 80% of customer onboarding
+              </h3>
+              <p className="text-slate-500 leading-relaxed mb-8">
+                By integrating our custom AI workflow, FintechCorp reduced their manual review process from 3 days to just 5 minutes, resulting in a massive boost to user acquisition and satisfaction.
+              </p>
+              
+              <a href="#" className="inline-flex items-center gap-2 text-sm font-bold text-slate-900 hover:text-blue-600 transition-colors group">
+                Read Full Story <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
+              </a>
+            </div>
+          </div>
+        </section>
+
+
+        {/* FAQ Section */}
+        <section className="max-w-[1200px] mx-auto pb-32 flex flex-col md:flex-row gap-16 items-start">
+          <div className="md:w-1/3 sticky top-32">
+            <span className="text-[11px] font-extrabold tracking-[0.2em] uppercase text-slate-900 mb-6 block">FAQ</span>
+            <h2 className="text-4xl md:text-5xl font-sans tracking-tight text-slate-950 font-medium">Frequently Asked<br />Questions</h2>
+          </div>
+          
+          <div className="md:w-2/3 flex flex-col gap-3 w-full">
+            {[
+              {
+                q: "Is Straviolabs suitable for early-stage AI startups?",
+                a: "Yes. We launched our site with Straviolabs while still early-stage, and it gave us a clear structure to explain our product without needing a full marketing team."
+              },
+              {
+                q: "Can Straviolabs be customized to match our brand?",
+                a: "Absolutely. We updated colors, typography, and visuals quickly, and the layout still felt cohesive and premium rather than like a generic template."
+              },
+              {
+                q: "Does Straviolabs work for technical AI products like agents or APIs?",
+                a: "Yes, our flexible architecture allows you to easily showcase highly technical features, interactive API docs, and agent simulations."
+              },
+              {
+                q: "How easy is Straviolabs to edit?",
+                a: "Straviolabs is built on modern, clean code with a component-based structure, making it incredibly intuitive for developers and designers alike to modify."
+              },
+              {
+                q: "Does Straviolabs actually help with conversions?",
+                a: "By providing a premium, highly trustworthy aesthetic, Straviolabs instantly elevates your brand perception, which is a critical factor in driving user conversions."
+              }
+            ].map((faq, idx) => (
+              <div 
+                key={idx} 
+                onClick={() => setOpenFaqIndex(openFaqIndex === idx ? null : idx)}
+                className={`transition-all duration-300 cursor-pointer overflow-hidden ${openFaqIndex === idx ? "bg-white border border-slate-200 shadow-sm rounded-xl" : "bg-slate-50 hover:bg-slate-100 rounded-xl"}`}
+              >
+                <div className="p-6 flex justify-between items-center">
+                  <h4 className="text-sm font-semibold text-slate-900 pr-8">{faq.q}</h4>
+                  <div className="shrink-0">
+                    <Plus className={`w-5 h-5 text-slate-900 transition-transform duration-300 ${openFaqIndex === idx ? "rotate-45" : ""}`} />
+                  </div>
+                </div>
+                <div 
+                  className={`px-6 overflow-hidden transition-all duration-300 ease-in-out ${openFaqIndex === idx ? "max-h-40 pb-6 opacity-100" : "max-h-0 opacity-0"}`}
+                >
+                  <p className="text-sm text-slate-500 leading-relaxed">
+                    {faq.a}
+                  </p>
+                </div>
+              </div>
+            ))}
+          </div>
+        </section>
+
+        {/* CTA bottom button */}
           <button className="bg-black text-white px-8 py-4 rounded-xl text-xs font-extrabold tracking-widest hover:bg-slate-900 transition-all flex items-center gap-2 mt-8 mx-auto shadow-md group cursor-pointer">
             TRANSFORM YOUR OPERATIONS <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
           </button>
