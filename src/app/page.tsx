@@ -811,20 +811,19 @@ export default function Home() {
             From complexity to clarity
           </h2>
 
-          {/* 3-Column Grid Cards */}
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 items-stretch mb-16">
+          {/* 3-Column Joined Cards Container */}
+          <div className="grid grid-cols-1 md:grid-cols-3 items-stretch mb-16 rounded-[2rem] border border-slate-200/80 bg-slate-50/50 relative overflow-hidden shadow-sm">
+            {/* Seamless Plus grid background for the entire container */}
+            <div className="absolute inset-0 grid-bg-light opacity-60 pointer-events-none" />
             
             {/* Card 01: Input */}
-            <div className="bg-slate-50/50 border border-slate-200/60 rounded-2xl p-8 flex flex-col justify-between min-h-[380px] relative overflow-hidden group hover:border-slate-300 transition-all duration-300">
-              {/* Plus grid background overlay */}
-              <div className="absolute inset-0 grid-bg-light opacity-60 pointer-events-none" />
-
+            <div className="p-8 md:p-10 flex flex-col justify-between min-h-[400px] relative">
               <div>
                 {/* Step Indicator */}
                 <span className="text-xs font-bold text-slate-400 block mb-8">01</span>
                 
                 {/* Mock UI: Search/Text Input Box */}
-                <div className="w-full bg-white border border-slate-200/80 rounded-xl py-3.5 px-4 shadow-[0_2px_8px_rgba(0,0,0,0.02)] flex items-center gap-2 mb-12 mt-4 relative">
+                <div className="w-full bg-white border border-slate-200/80 rounded-xl px-5 shadow-[0_2px_8px_rgba(0,0,0,0.02)] flex items-center gap-2 mb-4 mt-16 h-16 relative">
                   <div className="w-0.5 h-5 bg-slate-400 animate-pulse" /> {/* Cursor Blinker */}
                 </div>
               </div>
@@ -839,14 +838,14 @@ export default function Home() {
             </div>
 
             {/* Card 02: Intelligence */}
-            <div className="bg-white border border-slate-200/80 rounded-2xl p-8 flex flex-col justify-between min-h-[380px] relative overflow-hidden shadow-[0_24px_48px_rgba(0,0,0,0.04)] z-10 group hover:shadow-[0_32px_64px_rgba(0,0,0,0.06)] hover:border-slate-300 transition-all duration-300">
+            <div className="bg-white p-8 md:p-10 flex flex-col justify-between min-h-[400px] relative z-10 shadow-[0_0_50px_rgba(0,0,0,0.06)] border-x border-slate-100">
               <div>
                 {/* Step Indicator */}
                 <span className="text-xs font-bold text-slate-400 block mb-8">02</span>
                 
                 {/* Visual: Glowing 3D Sphere */}
                 <div className="w-full flex items-center justify-center my-6">
-                  <div className="w-28 h-28 rounded-full bg-gradient-to-tr from-blue-600 via-blue-500 to-indigo-400 relative flex items-center justify-center shadow-[0_12px_36px_rgba(37,99,235,0.4)] animate-bounce" style={{ animationDuration: '4s' }}>
+                  <div className="w-32 h-32 rounded-full bg-gradient-to-tr from-blue-600 via-blue-500 to-indigo-400 relative flex items-center justify-center shadow-[0_12px_40px_rgba(37,99,235,0.4)] animate-bounce" style={{ animationDuration: '4s' }}>
                     <div className="absolute inset-1 rounded-full bg-gradient-to-tr from-indigo-500 to-cyan-300 opacity-60 blur-[1px]" />
                     <div className="absolute inset-0 rounded-full bg-radial from-white/10 to-transparent pointer-events-none" />
                   </div>
@@ -863,31 +862,35 @@ export default function Home() {
             </div>
 
             {/* Card 03: Output */}
-            <div className="bg-slate-50/50 border border-slate-200/60 rounded-2xl p-8 flex flex-col justify-between min-h-[380px] relative overflow-hidden group hover:border-slate-300 transition-all duration-300">
-              {/* Plus grid background overlay */}
-              <div className="absolute inset-0 grid-bg-light opacity-60 pointer-events-none" />
-
+            <div className="p-8 md:p-10 flex flex-col justify-between min-h-[400px] relative overflow-hidden">
               <div>
                 {/* Step Indicator */}
                 <span className="text-xs font-bold text-slate-400 block mb-8">03</span>
                 
-                {/* Mock UI: Tab Menu Array */}
-                <div className="flex items-center gap-3 justify-center mb-12 mt-6">
-                  {/* Circular Button 1 */}
-                  <div className="w-10 h-10 rounded-full bg-white border border-slate-200/80 shadow-[0_2px_6px_rgba(0,0,0,0.01)] flex items-center justify-center text-slate-500 hover:text-slate-800 hover:border-slate-300 transition-colors">
-                    <Compass className="w-4 h-4" />
-                  </div>
-                  {/* Circular Button 2 */}
-                  <div className="w-10 h-10 rounded-full bg-white border border-slate-200/80 shadow-[0_2px_6px_rgba(0,0,0,0.01)] flex items-center justify-center text-slate-500 hover:text-slate-800 hover:border-slate-300 transition-colors">
-                    <Zap className="w-4 h-4" />
-                  </div>
-                  {/* Circular Button 3 */}
-                  <div className="w-10 h-10 rounded-full bg-white border border-slate-200/80 shadow-[0_2px_6px_rgba(0,0,0,0.01)] flex items-center justify-center text-slate-500 hover:text-slate-800 hover:border-slate-300 transition-colors">
-                    <Star className="w-4 h-4" />
-                  </div>
-                  {/* Circular Button 4 */}
-                  <div className="w-10 h-10 rounded-full bg-white border border-slate-200/80 shadow-[0_2px_6px_rgba(0,0,0,0.01)] flex items-center justify-center text-slate-500 hover:text-slate-800 hover:border-slate-300 transition-colors">
-                    <LayoutDashboard className="w-4 h-4" />
+                {/* Mock UI: Marquee Icon Array */}
+                <div className="relative w-full overflow-hidden flex items-center justify-center mb-4 mt-16 h-16">
+                  {/* Left/Right fade masks */}
+                  <div className="absolute inset-y-0 left-0 w-16 bg-gradient-to-r from-[#f8fafc] to-transparent z-10 pointer-events-none" />
+                  <div className="absolute inset-y-0 right-0 w-16 bg-gradient-to-l from-[#f8fafc] to-transparent z-10 pointer-events-none" />
+                  
+                  <div className="flex items-center gap-4 animate-marquee whitespace-nowrap">
+                    {/* Loop icons twice for seamless marquee */}
+                    {[...Array(3)].map((_, i) => (
+                      <div key={i} className="flex items-center gap-4 shrink-0 px-2">
+                        <div className="w-12 h-12 rounded-full bg-white border border-slate-200 shadow-[0_4px_12px_rgba(0,0,0,0.03)] flex items-center justify-center text-slate-600">
+                          <LayoutDashboard className="w-5 h-5" />
+                        </div>
+                        <div className="w-12 h-12 rounded-full bg-white border border-slate-200 shadow-[0_4px_12px_rgba(0,0,0,0.03)] flex items-center justify-center text-slate-600">
+                          <Compass className="w-5 h-5" />
+                        </div>
+                        <div className="w-12 h-12 rounded-full bg-white border border-slate-200 shadow-[0_4px_12px_rgba(0,0,0,0.03)] flex items-center justify-center text-slate-600">
+                          <Zap className="w-5 h-5" />
+                        </div>
+                        <div className="w-12 h-12 rounded-full bg-white border border-slate-200 shadow-[0_4px_12px_rgba(0,0,0,0.03)] flex items-center justify-center text-slate-600">
+                          <Star className="w-5 h-5" />
+                        </div>
+                      </div>
+                    ))}
                   </div>
                 </div>
               </div>
