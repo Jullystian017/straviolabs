@@ -52,6 +52,25 @@ import dynamic from "next/dynamic";
 
 const Silk = dynamic(() => import("@/components/Silk"), { ssr: false });
 
+const comparisonItems = [
+  {
+    problem: "New AI companies lack credibility with first-time visitors",
+    solution: "Built-in trust sections that establish authority and social proof"
+  },
+  {
+    problem: "Complex AI products are difficult to explain and sell",
+    solution: "Structured layouts that translate system complexity with confidence"
+  },
+  {
+    problem: "Abstract concepts feel hard to trust for prospects",
+    solution: "Interactive components that make abstract features tangible"
+  },
+  {
+    problem: "Traditional SaaS templates feel outdated and static",
+    solution: "Modern, highly tailored aesthetics that drive engagement"
+  }
+];
+
 export default function Home() {
   const containerRef = useRef<HTMLDivElement>(null);
   const cubeRef = useRef<HTMLDivElement>(null);
@@ -702,72 +721,79 @@ export default function Home() {
             AI and software products operate across data, systems, and automation. Steel provides a structured foundation to present that complexity with confidence — without locking you into a single narrative or industry.
           </p>
 
+          {/* Custom Marquee Keyframes */}
+          <style>{`
+            @keyframes marquee-reverse {
+              0% { transform: translateX(-2000px); }
+              100% { transform: translateX(0); }
+            }
+            .animate-marquee-reverse {
+              display: flex;
+              width: max-content;
+              animation: marquee-reverse 30s linear infinite;
+            }
+          `}</style>
+
           {/* Split Panel Visual Container */}
-          <div className="w-full rounded-2xl border border-slate-200/80 shadow-[0_12px_40px_rgba(0,0,0,0.06)] overflow-hidden flex flex-col md:flex-row relative min-h-[380px] bg-slate-950">
+          <div className="w-full rounded-2xl border border-slate-200/80 shadow-[0_12px_40px_rgba(0,0,0,0.06)] overflow-hidden flex relative h-[250px] bg-slate-950">
+            
+            {/* Cinematic Central Radial Glow & Edge Darkening Overlay */}
+            <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,rgba(59,130,246,0.4)_0%,rgba(0,0,0,0)_55%,rgba(0,0,0,0.92)_100%)] pointer-events-none z-20" />
+
             {/* Left Panel: Problem (Dark) */}
-            <div className="flex-1 bg-black p-8 md:p-12 flex flex-col justify-center items-center relative overflow-hidden min-h-[220px]">
-              {/* Abstract floating particles or glowing background blur */}
-              <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-48 h-48 rounded-full bg-red-950/20 blur-3xl pointer-events-none" />
+            <div className="absolute inset-y-0 left-0 w-1/2 bg-black overflow-hidden flex items-center z-10 border-r border-slate-800/30">
+              {/* Plus grid background overlay */}
+              <div className="absolute inset-0 grid-bg opacity-15 pointer-events-none" />
               
-              {/* Badges Stack */}
-              <div className="flex flex-col gap-4 w-full max-w-md relative z-10">
-                {/* Badge 1: Abstract and hard to trust (cut off style / floating) */}
-                <div className="self-end translate-x-12 opacity-40 bg-red-500/5 text-red-500/50 border border-red-500/10 px-5 py-2.5 rounded-full text-xs font-semibold flex items-center gap-2 select-none whitespace-nowrap">
-                  Abstract and hard to trust
-                </div>
-                
-                {/* Badge 2: New AI companies lack credibility */}
-                <div className="self-center bg-red-500/10 text-red-400 border border-red-500/20 px-5 py-3 rounded-full text-xs md:text-sm font-semibold flex items-center gap-2.5 shadow-[0_4px_12px_rgba(239,68,68,0.1)]">
-                  <span className="flex items-center justify-center w-5 h-5 rounded-full bg-red-500/20 text-red-400 font-extrabold text-xs">
-                    ✕
-                  </span>
-                  New AI companies lack credibility with first-time visitors
-                </div>
+              {/* Glowing background blur */}
+              <div className="absolute top-1/2 left-3/4 -translate-y-1/2 w-48 h-48 rounded-full bg-red-950/20 blur-3xl pointer-events-none" />
+              
+              {/* Marquee Track for Problems */}
+              <div className="animate-marquee-reverse flex items-center">
+                {/* 3 full copies to ensure infinite marquee width */}
+                {Array(3).fill(comparisonItems).flat().map((item, idx) => (
+                  <div key={`prob-${idx}`} className="w-[500px] shrink-0 flex justify-center px-3">
+                    <div className="bg-red-500/10 text-red-400 border border-red-500/20 px-6 py-3.5 rounded-full text-xs md:text-sm font-semibold flex items-center gap-2.5 shadow-[0_4px_12px_rgba(239,68,68,0.1)] w-full justify-center whitespace-nowrap">
+                      <span className="flex items-center justify-center w-5 h-5 rounded-full bg-red-500/20 text-red-400 font-extrabold text-xs">
+                        ✕
+                      </span>
+                      {item.problem}
+                    </div>
+                  </div>
+                ))}
               </div>
             </div>
 
-            {/* Center Overlapping Logo Badge */}
-            <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 z-20 flex items-center justify-center pointer-events-none md:pointer-events-auto">
-              <div className="w-20 h-20 rounded-2xl bg-white border border-slate-100 shadow-[0_16px_36px_rgba(0,0,0,0.15)] flex items-center justify-center p-4">
-                <img src="/straviolabs.png" alt="Straviolabs Logo" className="w-12 h-12 object-contain" />
+            {/* Center Overlapping Logo Badge with intense glow */}
+            <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 z-30 flex items-center justify-center pointer-events-none md:pointer-events-auto">
+              <div className="w-20 h-20 rounded-2xl bg-white border border-slate-100 shadow-[0_0_50px_rgba(37,99,235,0.7)] flex items-center justify-center p-3 relative">
+                {/* Pulse glow background ring */}
+                <div className="absolute inset-0 rounded-2xl bg-blue-500/20 blur-xl animate-pulse" />
+                <img src="/straviobiru.png" alt="Straviolabs Blue Logo" className="w-full h-full object-contain relative z-10" />
               </div>
             </div>
 
             {/* Right Panel: Solution (Blue Gradient Grid) */}
-            <div className="flex-1 bg-gradient-to-br from-blue-500 via-blue-600 to-indigo-800 p-8 md:p-12 flex flex-col justify-center items-center relative overflow-hidden min-h-[220px]">
+            <div className="absolute inset-y-0 right-0 w-1/2 bg-gradient-to-br from-blue-500 via-blue-600 to-indigo-800 overflow-hidden flex items-center z-10">
               {/* Plus grid background overlay */}
-              <div className="absolute inset-0 opacity-15 mix-blend-overlay pointer-events-none" style={{
-                backgroundImage: `radial-gradient(circle, white 10%, transparent 11%)`,
-                backgroundSize: '20px 20px'
-              }} />
-              <div className="absolute inset-0 opacity-20" style={{
-                backgroundImage: `linear-gradient(to right, rgba(255,255,255,0.1) 1px, transparent 1px), linear-gradient(to bottom, rgba(255,255,255,0.1) 1px, transparent 1px)`,
-                backgroundSize: '30px 30px'
-              }} />
+              <div className="absolute inset-0 grid-bg opacity-20 pointer-events-none" />
 
-              {/* Badges Stack */}
-              <div className="flex flex-col gap-4 w-full max-w-md relative z-10">
-                <div className="flex items-center gap-4 w-full">
-                  {/* Badge 1: Feel relatable */}
-                  <div className="-translate-x-12 opacity-50 bg-black text-white/50 border border-white/5 px-5 py-2.5 rounded-full text-xs font-semibold select-none whitespace-nowrap">
-                    Feel relatable
+              {/* Marquee Track for Solutions */}
+              <div className="animate-marquee-reverse flex items-center">
+                {/* 3 full copies to ensure infinite marquee width */}
+                {Array(3).fill(comparisonItems).flat().map((item, idx) => (
+                  <div key={`sol-${idx}`} className="w-[500px] shrink-0 flex justify-center px-3">
+                    <div className="bg-black text-white border border-white/15 px-6 py-3.5 rounded-full text-xs md:text-sm font-semibold flex items-center gap-2.5 shadow-[0_8px_24px_rgba(0,0,0,0.25)] w-full justify-center whitespace-nowrap">
+                      <span className="flex items-center justify-center w-5 h-5 rounded-full bg-white/10 text-white font-bold text-xs">
+                        !
+                      </span>
+                      {item.solution}
+                    </div>
                   </div>
-
-                  {/* Badge 2: Built-in trust sections */}
-                  <div className="bg-black text-white border border-white/15 px-5 py-3 rounded-full text-xs md:text-sm font-semibold flex items-center gap-2.5 shadow-[0_8px_24px_rgba(0,0,0,0.25)] whitespace-nowrap">
-                    <span className="flex items-center justify-center w-5 h-5 rounded-full bg-white/10 text-white font-bold text-xs">
-                      !
-                    </span>
-                    Built-in trust sections that establish authority and social proof
-                  </div>
-                  
-                  {/* Badge 3: Check cut off */}
-                  <div className="opacity-50 bg-black text-white/50 border border-white/5 px-5 py-2.5 rounded-full text-xs font-semibold flex items-center justify-center w-10 h-10 select-none shrink-0">
-                    ✓
-                  </div>
-                </div>
+                ))}
               </div>
             </div>
+
           </div>
         </section>
 
@@ -790,11 +816,8 @@ export default function Home() {
             
             {/* Card 01: Input */}
             <div className="bg-slate-50/50 border border-slate-200/60 rounded-2xl p-8 flex flex-col justify-between min-h-[380px] relative overflow-hidden group hover:border-slate-300 transition-all duration-300">
-              {/* Faint plus grid pattern overlay */}
-              <div className="absolute inset-0 opacity-[0.03] pointer-events-none" style={{
-                backgroundImage: `linear-gradient(to right, black 1px, transparent 1px), linear-gradient(to bottom, black 1px, transparent 1px)`,
-                backgroundSize: '20px 20px'
-              }} />
+              {/* Plus grid background overlay */}
+              <div className="absolute inset-0 grid-bg-light opacity-60 pointer-events-none" />
 
               <div>
                 {/* Step Indicator */}
