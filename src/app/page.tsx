@@ -123,31 +123,6 @@ export default function Home() {
         ease: "sine.inOut",
       });
 
-      // 3. ScrollTrigger Animations for Features
-      gsap.from(".feature-card", {
-        scrollTrigger: {
-          trigger: ".features-section",
-          start: "top 75%",
-          toggleActions: "play none none none",
-        },
-        y: 60,
-        opacity: 0,
-        duration: 0.8,
-        stagger: 0.15,
-        ease: "power2.out",
-      });
-
-      // 4. ScrollTrigger for Interactive Playground heading
-      gsap.from(".playground-heading", {
-        scrollTrigger: {
-          trigger: ".playground-section",
-          start: "top 80%",
-        },
-        y: 40,
-        opacity: 0,
-        duration: 0.8,
-        ease: "power2.out",
-      });
     },
     { scope: containerRef }
   );
@@ -208,9 +183,9 @@ export default function Home() {
     <div ref={containerRef} className="relative min-h-screen text-slate-100 overflow-hidden bg-glow-primary bg-glow-secondary bg-glow-tertiary">
 
       {/* Background Interactive Glow Blobs */}
-      <div className="absolute top-[-10%] left-[-10%] w-[50vw] h-[50vw] rounded-full filter blur-[120px] opacity-40 bg-radial from-violet-600/30 to-transparent pointer-events-none blob-1" />
-      <div className="absolute bottom-[20%] right-[-10%] w-[45vw] h-[45vw] rounded-full filter blur-[100px] opacity-30 bg-radial from-rose-500/20 to-transparent pointer-events-none blob-2" />
-      <div className="absolute bottom-[-10%] left-[20%] w-[40vw] h-[40vw] rounded-full filter blur-[110px] opacity-20 bg-radial from-emerald-400/25 to-transparent pointer-events-none blob-3" />
+      <div className="absolute top-[-10%] left-[-10%] w-[50vw] h-[50vw] rounded-full filter blur-[120px] opacity-40 bg-radial from-blue-600/30 to-transparent pointer-events-none blob-1" />
+      <div className="absolute bottom-[20%] right-[-10%] w-[45vw] h-[45vw] rounded-full filter blur-[100px] opacity-30 bg-radial from-cyan-500/20 to-transparent pointer-events-none blob-2" />
+      <div className="absolute bottom-[-10%] left-[20%] w-[40vw] h-[40vw] rounded-full filter blur-[110px] opacity-20 bg-radial from-indigo-500/20 to-transparent pointer-events-none blob-3" />
 
       {/* Hero & Navbar Container with Silk background */}
       <div className="relative w-full min-h-screen overflow-hidden flex flex-col justify-between">
@@ -219,7 +194,7 @@ export default function Home() {
           <Silk
             speed={5}
             scale={0.7}
-            color="#5227FF"
+            color="#2563eb"
             noiseIntensity={1.1}
             rotation={3.15}
           />
@@ -703,238 +678,218 @@ export default function Home() {
           </div>
         </header>
 
-        {/* Glow vignette gradient overlay at the very bottom so it fades smoothly to dark background below */}
-        <div className="absolute inset-x-0 bottom-0 h-40 bg-gradient-to-t from-[#040209] via-[#040209]/80 to-transparent z-30 pointer-events-none" />
       </div>
 
-      {/* Technical Features Section */}
-      <section id="features" className="relative z-10 py-24 border-t border-white/5 bg-slate-950/20 features-section">
-        <div className="px-6 mx-auto max-w-7xl md:px-12">
-
-          <div className="text-center max-w-2xl mx-auto mb-16">
-            <h2 className="text-3xl font-semibold tracking-tight md:text-5xl text-white">
-              The Architecture Stack
-            </h2>
-            <p className="mt-4 text-slate-400">
-              Meticulously selected technologies supporting ultra-smooth visuals and robust production reliability.
-            </p>
+      {/* Clean light theme sections */}
+      <div className="relative bg-white text-slate-900 py-32 px-6 md:px-12 z-30">
+        
+        {/* The Problem Section */}
+        <section className="max-w-[1200px] mx-auto mb-32">
+          {/* Subtitle */}
+          <div className="text-center mb-4">
+            <span className="text-[11px] font-extrabold tracking-[0.2em] text-[#0052cc] uppercase">
+              The Problem
+            </span>
           </div>
+          
+          {/* Heading */}
+          <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold tracking-tight text-center text-slate-950 mb-6 font-sans">
+            Modern software is complex by nature
+          </h2>
+          
+          {/* Description */}
+          <p className="text-slate-500 text-center max-w-2xl mx-auto text-base md:text-lg mb-16 leading-relaxed font-medium">
+            AI and software products operate across data, systems, and automation. Steel provides a structured foundation to present that complexity with confidence — without locking you into a single narrative or industry.
+          </p>
 
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            {/* Card 1 */}
-            <div className="glass-card p-8 rounded-2xl flex flex-col items-start text-left feature-card">
-              <div className="flex items-center justify-center w-12 h-12 rounded-xl bg-violet-950/50 border border-violet-500/20 text-violet-400 mb-6">
-                <Cpu className="w-6 h-6" />
+          {/* Split Panel Visual Container */}
+          <div className="w-full rounded-2xl border border-slate-200/80 shadow-[0_12px_40px_rgba(0,0,0,0.06)] overflow-hidden flex flex-col md:flex-row relative min-h-[380px] bg-slate-950">
+            {/* Left Panel: Problem (Dark) */}
+            <div className="flex-1 bg-black p-8 md:p-12 flex flex-col justify-center items-center relative overflow-hidden min-h-[220px]">
+              {/* Abstract floating particles or glowing background blur */}
+              <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-48 h-48 rounded-full bg-red-950/20 blur-3xl pointer-events-none" />
+              
+              {/* Badges Stack */}
+              <div className="flex flex-col gap-4 w-full max-w-md relative z-10">
+                {/* Badge 1: Abstract and hard to trust (cut off style / floating) */}
+                <div className="self-end translate-x-12 opacity-40 bg-red-500/5 text-red-500/50 border border-red-500/10 px-5 py-2.5 rounded-full text-xs font-semibold flex items-center gap-2 select-none whitespace-nowrap">
+                  Abstract and hard to trust
+                </div>
+                
+                {/* Badge 2: New AI companies lack credibility */}
+                <div className="self-center bg-red-500/10 text-red-400 border border-red-500/20 px-5 py-3 rounded-full text-xs md:text-sm font-semibold flex items-center gap-2.5 shadow-[0_4px_12px_rgba(239,68,68,0.1)]">
+                  <span className="flex items-center justify-center w-5 h-5 rounded-full bg-red-500/20 text-red-400 font-extrabold text-xs">
+                    ✕
+                  </span>
+                  New AI companies lack credibility with first-time visitors
+                </div>
               </div>
-              <h3 className="text-xl font-semibold text-white mb-2">GSAP & @gsap/react</h3>
-              <p className="text-slate-400 text-sm leading-relaxed mb-4">
-                Industry standard animation engine delivering advanced timelines, ScrollTrigger mechanisms, and flawless performance on heavy UI states.
-              </p>
-              <span className="text-xs font-mono text-violet-400 mt-auto">Revertable Lifecycles</span>
             </div>
 
-            {/* Card 2 */}
-            <div className="glass-card p-8 rounded-2xl flex flex-col items-start text-left feature-card">
-              <div className="flex items-center justify-center w-12 h-12 rounded-xl bg-rose-950/50 border border-rose-500/20 text-rose-400 mb-6">
-                <Layers className="w-6 h-6" />
+            {/* Center Overlapping Logo Badge */}
+            <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 z-20 flex items-center justify-center pointer-events-none md:pointer-events-auto">
+              <div className="w-20 h-20 rounded-2xl bg-white border border-slate-100 shadow-[0_16px_36px_rgba(0,0,0,0.15)] flex items-center justify-center p-4">
+                <img src="/straviolabs.png" alt="Straviolabs Logo" className="w-12 h-12 object-contain" />
               </div>
-              <h3 className="text-xl font-semibold text-white mb-2">Tailwind CSS v4</h3>
-              <p className="text-slate-400 text-sm leading-relaxed mb-4">
-                The latest iteration of Tailwind, featuring supercharged performance, fully CSS-driven configurations, and deep utility classes.
-              </p>
-              <span className="text-xs font-mono text-rose-400 mt-auto">CSS-First Engine</span>
             </div>
 
-            {/* Card 3 */}
-            <div className="glass-card p-8 rounded-2xl flex flex-col items-start text-left feature-card">
-              <div className="flex items-center justify-center w-12 h-12 rounded-xl bg-emerald-950/50 border border-emerald-500/20 text-emerald-400 mb-6">
-                <Compass className="w-6 h-6" />
+            {/* Right Panel: Solution (Blue Gradient Grid) */}
+            <div className="flex-1 bg-gradient-to-br from-blue-500 via-blue-600 to-indigo-800 p-8 md:p-12 flex flex-col justify-center items-center relative overflow-hidden min-h-[220px]">
+              {/* Plus grid background overlay */}
+              <div className="absolute inset-0 opacity-15 mix-blend-overlay pointer-events-none" style={{
+                backgroundImage: `radial-gradient(circle, white 10%, transparent 11%)`,
+                backgroundSize: '20px 20px'
+              }} />
+              <div className="absolute inset-0 opacity-20" style={{
+                backgroundImage: `linear-gradient(to right, rgba(255,255,255,0.1) 1px, transparent 1px), linear-gradient(to bottom, rgba(255,255,255,0.1) 1px, transparent 1px)`,
+                backgroundSize: '30px 30px'
+              }} />
+
+              {/* Badges Stack */}
+              <div className="flex flex-col gap-4 w-full max-w-md relative z-10">
+                <div className="flex items-center gap-4 w-full">
+                  {/* Badge 1: Feel relatable */}
+                  <div className="-translate-x-12 opacity-50 bg-black text-white/50 border border-white/5 px-5 py-2.5 rounded-full text-xs font-semibold select-none whitespace-nowrap">
+                    Feel relatable
+                  </div>
+
+                  {/* Badge 2: Built-in trust sections */}
+                  <div className="bg-black text-white border border-white/15 px-5 py-3 rounded-full text-xs md:text-sm font-semibold flex items-center gap-2.5 shadow-[0_8px_24px_rgba(0,0,0,0.25)] whitespace-nowrap">
+                    <span className="flex items-center justify-center w-5 h-5 rounded-full bg-white/10 text-white font-bold text-xs">
+                      !
+                    </span>
+                    Built-in trust sections that establish authority and social proof
+                  </div>
+                  
+                  {/* Badge 3: Check cut off */}
+                  <div className="opacity-50 bg-black text-white/50 border border-white/5 px-5 py-2.5 rounded-full text-xs font-semibold flex items-center justify-center w-10 h-10 select-none shrink-0">
+                    ✓
+                  </div>
+                </div>
               </div>
-              <h3 className="text-xl font-semibold text-white mb-2">Next.js 16 (App Router)</h3>
-              <p className="text-slate-400 text-sm leading-relaxed mb-4">
-                Next-generation server and client routing model, giving optimized builds, lightning-fast SSR, and clean module structures.
-              </p>
-              <span className="text-xs font-mono text-emerald-400 mt-auto">React 19 Ready</span>
             </div>
           </div>
+        </section>
 
-        </div>
-      </section>
-
-      {/* Interactive GSAP Animation Playground Section */}
-      <section id="playground" className="relative z-10 py-24 border-t border-white/5 bg-slate-950/40 playground-section">
-        <div className="px-6 mx-auto max-w-7xl md:px-12">
-
-          <div className="text-center max-w-2xl mx-auto mb-16 playground-heading">
-            <span className="px-3 py-1 text-[11px] font-semibold tracking-wider text-violet-400 bg-violet-950/50 rounded-full border border-violet-500/30 uppercase">Interactive Canvas</span>
-            <h2 className="text-3xl font-semibold tracking-tight md:text-5xl text-white mt-4">
-              GSAP Control Center
-            </h2>
-            <p className="mt-4 text-slate-400">
-              Experiment with real-time GSAP timelines. Interact with our animated glowing orb and watch the physics engine compile the frames.
-            </p>
+        {/* How It Works Section */}
+        <section className="max-w-[1200px] mx-auto pb-12">
+          {/* Subtitle */}
+          <div className="text-center mb-4">
+            <span className="text-[11px] font-extrabold tracking-[0.2em] text-[#0052cc] uppercase">
+              How It Works
+            </span>
           </div>
+          
+          {/* Heading */}
+          <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold tracking-tight text-center text-slate-950 mb-16 font-sans">
+            From complexity to clarity
+          </h2>
 
-          <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-stretch">
+          {/* 3-Column Grid Cards */}
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 items-stretch mb-16">
+            
+            {/* Card 01: Input */}
+            <div className="bg-slate-50/50 border border-slate-200/60 rounded-2xl p-8 flex flex-col justify-between min-h-[380px] relative overflow-hidden group hover:border-slate-300 transition-all duration-300">
+              {/* Faint plus grid pattern overlay */}
+              <div className="absolute inset-0 opacity-[0.03] pointer-events-none" style={{
+                backgroundImage: `linear-gradient(to right, black 1px, transparent 1px), linear-gradient(to bottom, black 1px, transparent 1px)`,
+                backgroundSize: '20px 20px'
+              }} />
 
-            {/* Visual Canvas Block */}
-            <div className="lg:col-span-7 rounded-2xl border border-white/5 bg-slate-950/90 flex flex-col items-center justify-center p-8 relative min-h-[400px] overflow-hidden">
-              <div className="absolute inset-0 grid-bg opacity-10 pointer-events-none" />
-
-              {/* Central Glowing Orb */}
-              <div
-                ref={cubeRef}
-                className="w-32 h-32 md:w-40 md:h-40 rounded-3xl bg-gradient-to-br from-violet-600 via-fuchsia-500 to-rose-500 shadow-[0_0_50px_rgba(139,92,246,0.5)] flex items-center justify-center cursor-pointer select-none group"
-                onClick={() => triggerPlaygroundAnim("pulse")}
-              >
-                <Zap className="w-12 h-12 text-white group-hover:scale-110 transition-transform" />
-              </div>
-
-              {/* Status Indicator */}
-              <div className="absolute bottom-6 flex items-center gap-2 px-3 py-1 bg-slate-900 border border-white/5 rounded-full text-xs font-mono">
-                <span className="w-2.5 h-2.5 rounded-full bg-emerald-500 animate-ping" />
-                <span className="text-slate-400">Active State:</span>
-                <span className="text-violet-400 font-semibold uppercase">{activeAnimation}</span>
-              </div>
-            </div>
-
-            {/* Animation Controls Panel */}
-            <div className="lg:col-span-5 flex flex-col justify-between glass-card p-8 rounded-2xl text-left">
               <div>
-                <h3 className="text-2xl font-semibold text-white mb-2 flex items-center gap-2">
-                  <Settings className="w-5 h-5 text-violet-400 animate-spin-slow" /> Timelines & Tweens
-                </h3>
-                <p className="text-slate-400 text-sm mb-8">
-                  Select an instruction set below to broadcast to our canvas. The tweening is generated dynamically using full hardware acceleration.
-                </p>
-
-                <div className="space-y-4">
-                  {/* Btn 1 */}
-                  <button
-                    onClick={() => triggerPlaygroundAnim("spin")}
-                    className="w-full text-left p-4 rounded-xl border border-white/5 bg-slate-900/60 hover:bg-violet-950/30 hover:border-violet-500/30 transition-all flex items-center justify-between group"
-                  >
-                    <div className="flex items-center gap-3">
-                      <div className="w-9 h-9 rounded-lg bg-violet-950/50 flex items-center justify-center text-violet-400">
-                        <RotateCw className="w-4 h-4 group-hover:rotate-45 transition-transform" />
-                      </div>
-                      <div>
-                        <p className="text-sm font-semibold text-white">Elastic Rotate</p>
-                        <p className="text-xs text-slate-500">gsap.to(..., &#123; rotation: 360, ease: elastic &#125;)</p>
-                      </div>
-                    </div>
-                    <ChevronRight className="w-4 h-4 text-slate-600 group-hover:text-violet-400 transition-colors" />
-                  </button>
-
-                  {/* Btn 2 */}
-                  <button
-                    onClick={() => triggerPlaygroundAnim("pulse")}
-                    className="w-full text-left p-4 rounded-xl border border-white/5 bg-slate-900/60 hover:bg-violet-950/30 hover:border-violet-500/30 transition-all flex items-center justify-between group"
-                  >
-                    <div className="flex items-center gap-3">
-                      <div className="w-9 h-9 rounded-lg bg-fuchsia-950/50 flex items-center justify-center text-fuchsia-400">
-                        <Scale className="w-4 h-4 group-hover:scale-110 transition-transform" />
-                      </div>
-                      <div>
-                        <p className="text-sm font-semibold text-white">Pulsing Stagger</p>
-                        <p className="text-xs text-slate-500">gsap.timeline().to(scale: 1.3).to(scale: 0.9)...</p>
-                      </div>
-                    </div>
-                    <ChevronRight className="w-4 h-4 text-slate-600 group-hover:text-fuchsia-400 transition-colors" />
-                  </button>
-
-                  {/* Btn 3 */}
-                  <button
-                    onClick={() => triggerPlaygroundAnim("bounce")}
-                    className="w-full text-left p-4 rounded-xl border border-white/5 bg-slate-900/60 hover:bg-violet-950/30 hover:border-violet-500/30 transition-all flex items-center justify-between group"
-                  >
-                    <div className="flex items-center gap-3">
-                      <div className="w-9 h-9 rounded-lg bg-rose-950/50 flex items-center justify-center text-rose-400">
-                        <Play className="w-4 h-4 -rotate-90 group-hover:translate-y-[-2px] transition-transform" />
-                      </div>
-                      <div>
-                        <p className="text-sm font-semibold text-white">Gravitational Bounce</p>
-                        <p className="text-xs text-slate-500">gsap.to(..., &#123; y: -100, ease: bounce.out &#125;)</p>
-                      </div>
-                    </div>
-                    <ChevronRight className="w-4 h-4 text-slate-600 group-hover:text-rose-400 transition-colors" />
-                  </button>
-
-                  {/* Btn 4 */}
-                  <button
-                    onClick={() => triggerPlaygroundAnim("glitch")}
-                    className="w-full text-left p-4 rounded-xl border border-white/5 bg-slate-900/60 hover:bg-violet-950/30 hover:border-violet-500/30 transition-all flex items-center justify-between group"
-                  >
-                    <div className="flex items-center gap-3">
-                      <div className="w-9 h-9 rounded-lg bg-emerald-950/50 flex items-center justify-center text-emerald-400">
-                        <Maximize className="w-4 h-4 group-hover:skew-x-6 transition-transform" />
-                      </div>
-                      <div>
-                        <p className="text-sm font-semibold text-white">Jitter Glitch</p>
-                        <p className="text-xs text-slate-500">Random coordinate offsetting via fast loops</p>
-                      </div>
-                    </div>
-                    <ChevronRight className="w-4 h-4 text-slate-600 group-hover:text-emerald-400 transition-colors" />
-                  </button>
+                {/* Step Indicator */}
+                <span className="text-xs font-bold text-slate-400 block mb-8">01</span>
+                
+                {/* Mock UI: Search/Text Input Box */}
+                <div className="w-full bg-white border border-slate-200/80 rounded-xl py-3.5 px-4 shadow-[0_2px_8px_rgba(0,0,0,0.02)] flex items-center gap-2 mb-12 mt-4 relative">
+                  <div className="w-0.5 h-5 bg-slate-400 animate-pulse" /> {/* Cursor Blinker */}
                 </div>
               </div>
 
-              <div className="mt-8 pt-6 border-t border-white/5 flex items-center justify-between text-xs text-slate-500 font-mono">
-                <span>GPU ACCELERATION: ACTIVE</span>
-                <span>GSAP v3.12+</span>
+              {/* Info Content */}
+              <div>
+                <h3 className="text-lg font-bold text-slate-950 mb-2">Input</h3>
+                <p className="text-sm text-slate-500 leading-relaxed font-medium">
+                  Introduce the problem your users face and the data or actions that start the process.
+                </p>
+              </div>
+            </div>
+
+            {/* Card 02: Intelligence */}
+            <div className="bg-white border border-slate-200/80 rounded-2xl p-8 flex flex-col justify-between min-h-[380px] relative overflow-hidden shadow-[0_24px_48px_rgba(0,0,0,0.04)] z-10 group hover:shadow-[0_32px_64px_rgba(0,0,0,0.06)] hover:border-slate-300 transition-all duration-300">
+              <div>
+                {/* Step Indicator */}
+                <span className="text-xs font-bold text-slate-400 block mb-8">02</span>
+                
+                {/* Visual: Glowing 3D Sphere */}
+                <div className="w-full flex items-center justify-center my-6">
+                  <div className="w-28 h-28 rounded-full bg-gradient-to-tr from-blue-600 via-blue-500 to-indigo-400 relative flex items-center justify-center shadow-[0_12px_36px_rgba(37,99,235,0.4)] animate-bounce" style={{ animationDuration: '4s' }}>
+                    <div className="absolute inset-1 rounded-full bg-gradient-to-tr from-indigo-500 to-cyan-300 opacity-60 blur-[1px]" />
+                    <div className="absolute inset-0 rounded-full bg-radial from-white/10 to-transparent pointer-events-none" />
+                  </div>
+                </div>
+              </div>
+
+              {/* Info Content */}
+              <div>
+                <h3 className="text-lg font-bold text-slate-950 mb-2">Intelligence</h3>
+                <p className="text-sm text-slate-500 leading-relaxed font-medium">
+                  See how your system processes info automates decisions, or generates insights.
+                </p>
+              </div>
+            </div>
+
+            {/* Card 03: Output */}
+            <div className="bg-slate-50/50 border border-slate-200/60 rounded-2xl p-8 flex flex-col justify-between min-h-[380px] relative overflow-hidden group hover:border-slate-300 transition-all duration-300">
+              {/* Faint plus grid pattern overlay */}
+              <div className="absolute inset-0 opacity-[0.03] pointer-events-none" style={{
+                backgroundImage: `linear-gradient(to right, black 1px, transparent 1px), linear-gradient(to bottom, black 1px, transparent 1px)`,
+                backgroundSize: '20px 20px'
+              }} />
+
+              <div>
+                {/* Step Indicator */}
+                <span className="text-xs font-bold text-slate-400 block mb-8">03</span>
+                
+                {/* Mock UI: Tab Menu Array */}
+                <div className="flex items-center gap-3 justify-center mb-12 mt-6">
+                  {/* Circular Button 1 */}
+                  <div className="w-10 h-10 rounded-full bg-white border border-slate-200/80 shadow-[0_2px_6px_rgba(0,0,0,0.01)] flex items-center justify-center text-slate-500 hover:text-slate-800 hover:border-slate-300 transition-colors">
+                    <Compass className="w-4 h-4" />
+                  </div>
+                  {/* Circular Button 2 */}
+                  <div className="w-10 h-10 rounded-full bg-white border border-slate-200/80 shadow-[0_2px_6px_rgba(0,0,0,0.01)] flex items-center justify-center text-slate-500 hover:text-slate-800 hover:border-slate-300 transition-colors">
+                    <Zap className="w-4 h-4" />
+                  </div>
+                  {/* Circular Button 3 */}
+                  <div className="w-10 h-10 rounded-full bg-white border border-slate-200/80 shadow-[0_2px_6px_rgba(0,0,0,0.01)] flex items-center justify-center text-slate-500 hover:text-slate-800 hover:border-slate-300 transition-colors">
+                    <Star className="w-4 h-4" />
+                  </div>
+                  {/* Circular Button 4 */}
+                  <div className="w-10 h-10 rounded-full bg-white border border-slate-200/80 shadow-[0_2px_6px_rgba(0,0,0,0.01)] flex items-center justify-center text-slate-500 hover:text-slate-800 hover:border-slate-300 transition-colors">
+                    <LayoutDashboard className="w-4 h-4" />
+                  </div>
+                </div>
+              </div>
+
+              {/* Info Content */}
+              <div>
+                <h3 className="text-lg font-bold text-slate-950 mb-2">Output</h3>
+                <p className="text-sm text-slate-500 leading-relaxed font-medium">
+                  Get a full detailed answer of how to solve the problem your users face.
+                </p>
               </div>
             </div>
 
           </div>
 
-        </div>
-      </section>
+          {/* CTA bottom button */}
+          <button className="bg-black text-white px-8 py-4 rounded-xl text-xs font-extrabold tracking-widest hover:bg-slate-900 transition-all flex items-center gap-2 mt-8 mx-auto shadow-md group cursor-pointer">
+            TRANSFORM YOUR OPERATIONS <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
+          </button>
+        </section>
 
-      {/* Call To Action */}
-      <section className="relative z-10 py-24 border-t border-white/5 bg-slate-950/60 text-center">
-        <div className="px-6 mx-auto max-w-4xl md:px-12">
-          <h2 className="text-3xl font-semibold tracking-tight md:text-5xl text-white">
-            Ready to Build Your Ecosystem?
-          </h2>
-          <p className="mt-6 text-slate-400 max-w-xl mx-auto leading-relaxed">
-            Straviolabs integrates premium front-end motion, standard responsive Tailwind code, and high-performance server logic to deliver memorable digital artifacts.
-          </p>
-          <div className="mt-10 flex flex-col sm:flex-row items-center justify-center gap-4">
-            <button
-              onClick={() => triggerPlaygroundAnim("spin")}
-              className="w-full sm:w-auto px-8 py-4 text-sm font-semibold rounded-xl bg-white text-slate-950 hover:bg-slate-200 transition-all"
-            >
-              Get In Touch
-            </button>
-            <a
-              href="https://github.com"
-              target="_blank"
-              rel="noreferrer"
-              className="w-full sm:w-auto px-8 py-4 text-sm font-semibold rounded-xl border border-white/10 bg-white/5 hover:bg-white/10 transition-all flex items-center justify-center gap-2"
-            >
-              <Code className="w-4 h-4" /> View Open Source
-            </a>
-          </div>
-        </div>
-      </section>
-
-      {/* Footer */}
-      <footer className="relative z-10 py-12 border-t border-white/5 bg-slate-950 text-slate-500 text-xs">
-        <div className="max-w-7xl mx-auto px-6 md:px-12 flex flex-col md:flex-row items-center justify-between gap-6">
-          <div className="flex items-center space-x-2">
-            <div className="w-6 h-6 rounded-lg bg-violet-600/30 border border-violet-500/30 flex items-center justify-center">
-              <Zap className="w-3.5 h-3.5 text-violet-400" />
-            </div>
-            <span className="font-semibold text-slate-400">STRAVIOLABS</span>
-          </div>
-          <p>© {new Date().getFullYear()} Straviolabs. Crafting premium creative software. All rights reserved.</p>
-          <div className="flex items-center space-x-6">
-            <a href="#" className="hover:text-white transition">Privacy Policy</a>
-            <a href="#" className="hover:text-white transition">Terms of Service</a>
-          </div>
-        </div>
-      </footer>
-
+      </div>
     </div>
   );
 }
