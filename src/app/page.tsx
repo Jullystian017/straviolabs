@@ -220,7 +220,7 @@ export default function Home() {
         </div>
 
         {/* Elegant Plus Overlay over Silk */}
-        <div className="absolute inset-0 z-[1] grid-bg opacity-100 pointer-events-none mix-blend-overlay" />
+        <div className="absolute inset-0 z-[1] grid-bg opacity-100 pointer-events-none" />
 
         {/* Header/Navbar */}
         <div className={`fixed top-0 left-0 right-0 z-50 w-full transition-all duration-500 ease-[cubic-bezier(0.23,1,0.32,1)] ${isScrolled ? "pt-4 px-4 pointer-events-none" : ""} nav-item`}>
@@ -864,11 +864,8 @@ export default function Home() {
 
             {/* Card 03: Output */}
             <div className="bg-slate-50/50 border border-slate-200/60 rounded-2xl p-8 flex flex-col justify-between min-h-[380px] relative overflow-hidden group hover:border-slate-300 transition-all duration-300">
-              {/* Faint plus grid pattern overlay */}
-              <div className="absolute inset-0 opacity-[0.03] pointer-events-none" style={{
-                backgroundImage: `linear-gradient(to right, black 1px, transparent 1px), linear-gradient(to bottom, black 1px, transparent 1px)`,
-                backgroundSize: '20px 20px'
-              }} />
+              {/* Plus grid background overlay */}
+              <div className="absolute inset-0 grid-bg-light opacity-60 pointer-events-none" />
 
               <div>
                 {/* Step Indicator */}
