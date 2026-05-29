@@ -231,15 +231,14 @@ export default function Home() {
         </div>
 
         {/* Elegant Plus Overlay over Silk */}
-        <div className="absolute inset-0 z-[1] grid-bg opacity-100 pointer-events-none" />
+        <div className="absolute inset-0 z-[1] grid-bg opacity-30 pointer-events-none" />
 
         {/* Header/Navbar */}
         <div className={`fixed top-0 left-0 right-0 z-50 w-full transition-all duration-500 ease-[cubic-bezier(0.23,1,0.32,1)] ${isScrolled ? "pt-4 px-4 pointer-events-none" : ""} nav-item`}>
-          <nav className={`mx-auto flex items-center justify-between transition-all duration-500 pointer-events-auto ${
-            isScrolled 
-              ? "max-w-[1050px] bg-white rounded-2xl shadow-[0_8px_30px_rgb(0,0,0,0.12)] px-6 py-2 border border-slate-200/50" 
-              : "max-w-[1200px] px-8 md:px-12 py-6 bg-transparent"
-          }`}>
+          <nav className={`mx-auto flex items-center justify-between transition-all duration-500 pointer-events-auto ${isScrolled
+            ? "max-w-[1050px] bg-white rounded-2xl shadow-[0_8px_30px_rgb(0,0,0,0.12)] px-6 py-2 border border-slate-200/50"
+            : "max-w-[1200px] px-8 md:px-12 py-6 bg-transparent"
+            }`}>
             {/* Logo */}
             <div className="flex items-center space-x-3">
               <img src="/straviolabs.png" alt="Straviolabs Logo" className={`w-10 h-10 object-contain transition-all duration-300 ${isScrolled ? "brightness-0" : ""}`} />
@@ -250,16 +249,15 @@ export default function Home() {
 
             {/* Links */}
             <div className={`hidden md:flex items-center space-x-8 text-[13px] font-semibold transition-colors duration-300 ${isScrolled ? "text-slate-600" : "text-slate-300"}`}>
-              
+
               {/* Services */}
               <div className="group relative">
                 <button className={`flex items-center gap-1.5 transition py-4 ${isScrolled ? "hover:text-slate-900" : "hover:text-white"}`}>
                   Services <ChevronDown className="w-3.5 h-3.5 opacity-70 group-hover:rotate-180 transition-transform" />
                 </button>
                 <div className="absolute top-[85%] left-1/2 -translate-x-1/2 pt-2 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 z-50">
-                  <div className={`w-[850px] rounded-2xl p-2 flex border transition-all duration-300 ${
-                    isScrolled ? "bg-white shadow-[0_20px_40px_rgba(0,0,0,0.1)] border-slate-100 text-slate-800" : "bg-slate-900/90 backdrop-blur-md border-white/10 text-slate-200"
-                  }`}>
+                  <div className={`w-[850px] rounded-2xl p-2 flex border transition-all duration-300 ${isScrolled ? "bg-white shadow-[0_20px_40px_rgba(0,0,0,0.1)] border-slate-100 text-slate-800" : "bg-slate-900/90 backdrop-blur-md border-white/10 text-slate-200"
+                    }`}>
                     {/* Grid Left */}
                     <div className="flex-1 p-6">
                       <div className={`inline-block px-3 py-1 rounded-full text-[10px] font-bold tracking-wider uppercase mb-8 ${isScrolled ? "bg-slate-100 text-slate-800" : "bg-white/10 text-white"}`}>
@@ -328,9 +326,8 @@ export default function Home() {
                   Products <ChevronDown className="w-3.5 h-3.5 opacity-70 group-hover:rotate-180 transition-transform" />
                 </button>
                 <div className="absolute top-[85%] left-1/2 -translate-x-1/2 pt-2 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 z-50">
-                  <div className={`w-[850px] rounded-2xl p-2 flex border transition-all duration-300 ${
-                    isScrolled ? "bg-white shadow-[0_20px_40px_rgba(0,0,0,0.1)] border-slate-100 text-slate-800" : "bg-slate-900/90 backdrop-blur-md border-white/10 text-slate-200"
-                  }`}>
+                  <div className={`w-[850px] rounded-2xl p-2 flex border transition-all duration-300 ${isScrolled ? "bg-white shadow-[0_20px_40px_rgba(0,0,0,0.1)] border-slate-100 text-slate-800" : "bg-slate-900/90 backdrop-blur-md border-white/10 text-slate-200"
+                    }`}>
                     {/* Grid Left */}
                     <div className="flex-1 p-6">
                       <div className={`inline-block px-3 py-1 rounded-full text-[10px] font-bold tracking-wider uppercase mb-8 ${isScrolled ? "bg-slate-100 text-slate-800" : "bg-white/10 text-white"}`}>
@@ -414,8 +411,8 @@ export default function Home() {
               <a
                 href="#contact"
                 className={`px-6 py-2.5 text-xs font-bold tracking-wider rounded transition-all flex items-center gap-2 ${isScrolled
-                    ? "text-white bg-slate-900 hover:bg-slate-800"
-                    : "text-slate-200 bg-white/5 border border-white/10 hover:bg-white/10"
+                  ? "text-white bg-slate-900 hover:bg-slate-800"
+                  : "text-slate-200 bg-white/5 border border-white/10 hover:bg-white/10"
                   }`}
               >
                 CONTACT US <ArrowRight className={`w-3.5 h-3.5 transition-opacity ${isScrolled ? "opacity-100" : "opacity-70"}`} />
@@ -574,7 +571,7 @@ export default function Home() {
 
       {/* Clean light theme sections */}
       <div className="relative bg-white text-slate-900 py-32 px-6 md:px-12 z-30">
-        
+
 
         {/* Trusted By Marquee Section */}
         <section className="max-w-[1200px] mx-auto mb-32 border-b border-slate-100 pb-20 overflow-hidden">
@@ -601,16 +598,16 @@ export default function Home() {
         <section className="max-w-[1200px] mx-auto mb-32">
           {/* Subtitle */}
           <div className="text-center mb-4">
-            <span className="text-[11px] font-extrabold tracking-[0.2em] text-[#0052cc] uppercase">
+            <span className="text-[11px] font-extrabold tracking-[0.2em] uppercase text-slate-900">
               The Problem
             </span>
           </div>
-          
+
           {/* Heading */}
-          <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold tracking-tight text-center text-slate-950 mb-6 font-sans">
+          <h2 className="text-4xl md:text-5xl font-sans tracking-tight text-center text-slate-950 mb-6 font-medium">
             Modern software is complex by nature
           </h2>
-          
+
           {/* Description */}
           <p className="text-slate-500 text-center max-w-2xl mx-auto text-base md:text-lg mb-16 leading-relaxed font-medium">
             AI and software products operate across data, systems, and automation. Steel provides a structured foundation to present that complexity with confidence — without locking you into a single narrative or industry.
@@ -631,7 +628,7 @@ export default function Home() {
 
           {/* Split Panel Visual Container */}
           <div className="w-full rounded-2xl border border-slate-200/80 shadow-[0_12px_40px_rgba(0,0,0,0.06)] overflow-hidden flex relative h-[250px] bg-slate-950">
-            
+
             {/* Cinematic Central Radial Glow & Edge Darkening Overlay */}
             <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,rgba(59,130,246,0.4)_0%,rgba(0,0,0,0)_55%,rgba(0,0,0,0.92)_100%)] pointer-events-none z-20" />
 
@@ -639,10 +636,10 @@ export default function Home() {
             <div className="absolute inset-y-0 left-0 w-1/2 bg-black overflow-hidden flex items-center z-10 border-r border-slate-800/30">
               {/* Plus grid background overlay */}
               <div className="absolute inset-0 grid-bg opacity-15 pointer-events-none" />
-              
+
               {/* Glowing background blur */}
               <div className="absolute top-1/2 left-3/4 -translate-y-1/2 w-48 h-48 rounded-full bg-red-950/20 blur-3xl pointer-events-none" />
-              
+
               {/* Marquee Track for Problems */}
               <div className="animate-marquee-reverse flex items-center">
                 {/* 3 full copies to ensure infinite marquee width */}
@@ -696,13 +693,13 @@ export default function Home() {
         <section className="max-w-[1200px] mx-auto pb-12">
           {/* Subtitle */}
           <div className="text-center mb-4">
-            <span className="text-[11px] font-extrabold tracking-[0.2em] text-[#0052cc] uppercase">
+            <span className="text-[11px] font-extrabold tracking-[0.2em] uppercase text-slate-900">
               How It Works
             </span>
           </div>
-          
+
           {/* Heading */}
-          <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold tracking-tight text-center text-slate-950 mb-16 font-sans">
+          <h2 className="text-4xl md:text-5xl font-sans tracking-tight text-center text-slate-950 mb-16 font-medium">
             From complexity to clarity
           </h2>
 
@@ -710,13 +707,13 @@ export default function Home() {
           <div className="grid grid-cols-1 md:grid-cols-3 items-stretch mb-16 rounded-[2rem] border border-slate-200/80 bg-slate-50/50 relative overflow-hidden shadow-sm">
             {/* Seamless Plus grid background for the entire container */}
             <div className="absolute inset-0 grid-bg-light opacity-60 pointer-events-none" />
-            
+
             {/* Card 01: Input */}
             <div className="p-8 md:p-10 flex flex-col justify-between min-h-[400px] relative">
               <div>
                 {/* Step Indicator */}
                 <span className="text-xs font-bold text-slate-400 block mb-8">01</span>
-                
+
                 {/* Mock UI: Search/Text Input Box */}
                 <div className="w-full bg-white border border-slate-200/80 rounded-xl px-5 shadow-[0_2px_8px_rgba(0,0,0,0.02)] flex items-center gap-2 mb-4 mt-16 h-16 relative">
                   <div className="w-0.5 h-5 bg-slate-400 animate-pulse" /> {/* Cursor Blinker */}
@@ -737,7 +734,7 @@ export default function Home() {
               <div>
                 {/* Step Indicator */}
                 <span className="text-xs font-bold text-slate-400 block mb-8">02</span>
-                
+
                 {/* Visual: Glowing 3D Sphere */}
                 <div className="w-full flex items-center justify-center my-6">
                   <div className="w-32 h-32 rounded-full bg-gradient-to-tr from-blue-600 via-blue-500 to-indigo-400 relative flex items-center justify-center shadow-[0_12px_40px_rgba(37,99,235,0.4)] animate-bounce" style={{ animationDuration: '4s' }}>
@@ -761,13 +758,13 @@ export default function Home() {
               <div>
                 {/* Step Indicator */}
                 <span className="text-xs font-bold text-slate-400 block mb-8">03</span>
-                
+
                 {/* Mock UI: Marquee Icon Array */}
                 <div className="relative w-full overflow-hidden flex items-center justify-center mb-4 mt-16 h-16">
                   {/* Left/Right fade masks */}
                   <div className="absolute inset-y-0 left-0 w-16 bg-gradient-to-r from-[#f8fafc] to-transparent z-10 pointer-events-none" />
                   <div className="absolute inset-y-0 right-0 w-16 bg-gradient-to-l from-[#f8fafc] to-transparent z-10 pointer-events-none" />
-                  
+
                   <div className="flex items-center gap-4 animate-marquee whitespace-nowrap">
                     {/* Loop icons twice for seamless marquee */}
                     {[...Array(3)].map((_, i) => (
@@ -801,173 +798,173 @@ export default function Home() {
 
           </div>
 
-  
 
-        {/* Services Section */}
-        <section className="max-w-[1200px] mx-auto pb-32">
-          {/* Subtitle */}
-          <div className="text-center mb-4">
-            <span className="text-[11px] font-extrabold tracking-[0.2em] text-[#0052cc] uppercase">
-              Our Services
-            </span>
-          </div>
-          
-          {/* Heading */}
-          <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold tracking-tight text-center text-slate-950 mb-16 font-sans">
-            End-to-end <span className="text-[#0052cc]">Solutions</span>
-          </h2>
 
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-            {/* Service 1 */}
-            <div className="bg-white border border-slate-200/80 rounded-[2rem] p-8 shadow-[0_4px_20px_rgba(0,0,0,0.03)] hover:shadow-[0_8px_30px_rgba(0,82,204,0.08)] transition-all duration-300 group">
-              <div className="w-12 h-12 rounded-2xl bg-blue-50 text-blue-600 flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300">
-                <MonitorPlay className="w-6 h-6" />
-              </div>
-              <h3 className="text-xl font-bold text-slate-900 mb-3">Web Design</h3>
-              <p className="text-slate-500 leading-relaxed text-sm">
-                We craft beautiful, high-converting landing pages and robust web applications tailored to your specific business needs.
-              </p>
+          {/* Services Section */}
+          <section className="max-w-[1200px] mx-auto pb-32">
+            {/* Subtitle */}
+            <div className="text-center mb-4">
+              <span className="text-[11px] font-extrabold tracking-[0.2em] uppercase text-slate-900">
+                Our Services
+              </span>
             </div>
 
-            {/* Service 2 */}
-            <div className="bg-white border border-slate-200/80 rounded-[2rem] p-8 shadow-[0_4px_20px_rgba(0,0,0,0.03)] hover:shadow-[0_8px_30px_rgba(0,82,204,0.08)] transition-all duration-300 group">
-              <div className="w-12 h-12 rounded-2xl bg-blue-50 text-blue-600 flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300">
-                <Smartphone className="w-6 h-6" />
+            {/* Heading */}
+            <h2 className="text-4xl md:text-5xl font-sans tracking-tight text-center text-slate-950 mb-16 font-medium">
+              End-to-end <span className="text-[#0052cc]">Solutions</span>
+            </h2>
+
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+              {/* Service 1 */}
+              <div className="bg-white border border-slate-200/80 rounded-[2rem] p-8 shadow-[0_4px_20px_rgba(0,0,0,0.03)] hover:shadow-[0_8px_30px_rgba(0,82,204,0.08)] transition-all duration-300 group">
+                <div className="w-12 h-12 rounded-2xl bg-blue-50 text-blue-600 flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300">
+                  <MonitorPlay className="w-6 h-6" />
+                </div>
+                <h3 className="text-xl font-bold text-slate-900 mb-3">Web Design</h3>
+                <p className="text-slate-500 leading-relaxed text-sm">
+                  We craft beautiful, high-converting landing pages and robust web applications tailored to your specific business needs.
+                </p>
               </div>
-              <h3 className="text-xl font-bold text-slate-900 mb-3">Mobile Design</h3>
-              <p className="text-slate-500 leading-relaxed text-sm">
-                Intuitive iOS and Android applications with flawless user experiences that keep your audience engaged on the go.
-              </p>
-            </div>
 
-            {/* Service 3 */}
-            <div className="bg-white border border-slate-200/80 rounded-[2rem] p-8 shadow-[0_4px_20px_rgba(0,0,0,0.03)] hover:shadow-[0_8px_30px_rgba(0,82,204,0.08)] transition-all duration-300 group">
-              <div className="w-12 h-12 rounded-2xl bg-blue-50 text-blue-600 flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300">
-                <Code2 className="w-6 h-6" />
+              {/* Service 2 */}
+              <div className="bg-white border border-slate-200/80 rounded-[2rem] p-8 shadow-[0_4px_20px_rgba(0,0,0,0.03)] hover:shadow-[0_8px_30px_rgba(0,82,204,0.08)] transition-all duration-300 group">
+                <div className="w-12 h-12 rounded-2xl bg-blue-50 text-blue-600 flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300">
+                  <Smartphone className="w-6 h-6" />
+                </div>
+                <h3 className="text-xl font-bold text-slate-900 mb-3">Mobile Design</h3>
+                <p className="text-slate-500 leading-relaxed text-sm">
+                  Intuitive iOS and Android applications with flawless user experiences that keep your audience engaged on the go.
+                </p>
               </div>
-              <h3 className="text-xl font-bold text-slate-900 mb-3">AI Integration</h3>
-              <p className="text-slate-500 leading-relaxed text-sm">
-                Seamlessly connect cutting-edge AI models into your existing workflows to automate tasks and unlock new capabilities.
-              </p>
-            </div>
-          </div>
-        </section>
 
-        {/* Case Studies Section */}
-        <section className="max-w-[1200px] mx-auto pb-32">
-          {/* Subtitle */}
-          <div className="text-center mb-4">
-            <span className="text-[11px] font-extrabold tracking-[0.2em] text-[#0052cc] uppercase">
-              Case Studies
-            </span>
-          </div>
-          
-          {/* Heading */}
-          <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold tracking-tight text-center text-slate-950 mb-16 font-sans">
-            Proven <span className="text-[#0052cc]">Results</span>
-          </h2>
-
-          <div className="bg-white border border-slate-200/80 rounded-[2.5rem] shadow-[0_4px_20px_rgba(0,0,0,0.03)] overflow-hidden flex flex-col md:flex-row">
-            {/* Left: Visual/Graphic */}
-            <div className="md:w-1/2 bg-slate-50 p-12 relative flex items-center justify-center border-b md:border-b-0 md:border-r border-slate-200/80">
-              <div className="absolute inset-0 grid-bg-light opacity-60 pointer-events-none" />
-              
-              <div className="relative z-10 w-full max-w-sm bg-white rounded-2xl shadow-lg border border-slate-200 p-6">
-                 <div className="flex items-center gap-3 mb-6">
-                   <div className="w-10 h-10 rounded-full bg-slate-100 flex items-center justify-center">
-                     <Wallet className="w-5 h-5 text-slate-600" />
-                   </div>
-                   <div>
-                     <div className="font-bold text-slate-900 text-sm">FintechCorp</div>
-                     <div className="text-xs text-slate-500">Financial Services</div>
-                   </div>
-                 </div>
-                 <div className="space-y-3">
-                   <div className="h-2 bg-slate-100 rounded-full w-full"></div>
-                   <div className="h-2 bg-slate-100 rounded-full w-4/5"></div>
-                   <div className="h-2 bg-slate-100 rounded-full w-2/3"></div>
-                 </div>
-                 <div className="mt-6 pt-6 border-t border-slate-100 flex justify-between items-center">
-                   <div className="text-3xl font-extrabold text-blue-600">+300%</div>
-                   <div className="text-xs font-semibold text-slate-500 uppercase tracking-wider">Conversion</div>
-                 </div>
+              {/* Service 3 */}
+              <div className="bg-white border border-slate-200/80 rounded-[2rem] p-8 shadow-[0_4px_20px_rgba(0,0,0,0.03)] hover:shadow-[0_8px_30px_rgba(0,82,204,0.08)] transition-all duration-300 group">
+                <div className="w-12 h-12 rounded-2xl bg-blue-50 text-blue-600 flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300">
+                  <Code2 className="w-6 h-6" />
+                </div>
+                <h3 className="text-xl font-bold text-slate-900 mb-3">AI Integration</h3>
+                <p className="text-slate-500 leading-relaxed text-sm">
+                  Seamlessly connect cutting-edge AI models into your existing workflows to automate tasks and unlock new capabilities.
+                </p>
               </div>
             </div>
+          </section>
 
-            {/* Right: Content */}
-            <div className="md:w-1/2 p-12 md:p-16 flex flex-col justify-center">
-              <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-blue-50 text-blue-600 text-xs font-bold mb-6 w-fit">
-                <TrendingUp className="w-4 h-4" /> Success Story
-              </div>
-              <h3 className="text-3xl font-bold text-slate-900 mb-4">
-                How FintechCorp automated 80% of customer onboarding
-              </h3>
-              <p className="text-slate-500 leading-relaxed mb-8">
-                By integrating our custom AI workflow, FintechCorp reduced their manual review process from 3 days to just 5 minutes, resulting in a massive boost to user acquisition and satisfaction.
-              </p>
-              
-              <a href="#" className="inline-flex items-center gap-2 text-sm font-bold text-slate-900 hover:text-blue-600 transition-colors group">
-                Read Full Story <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
-              </a>
+          {/* Case Studies Section */}
+          <section className="max-w-[1200px] mx-auto pb-32">
+            {/* Subtitle */}
+            <div className="text-center mb-4">
+              <span className="text-[11px] font-extrabold tracking-[0.2em] uppercase text-slate-900">
+                Case Studies
+              </span>
             </div>
-          </div>
-        </section>
 
+            {/* Heading */}
+            <h2 className="text-4xl md:text-5xl font-sans tracking-tight text-center text-slate-950 mb-16 font-medium">
+              Proven <span className="text-[#0052cc]">Results</span>
+            </h2>
 
-        {/* FAQ Section */}
-        <section className="max-w-[1200px] mx-auto pb-32 flex flex-col md:flex-row gap-16 items-start">
-          <div className="md:w-1/3 sticky top-32">
-            <span className="text-[11px] font-extrabold tracking-[0.2em] uppercase text-slate-900 mb-6 block">FAQ</span>
-            <h2 className="text-4xl md:text-5xl font-sans tracking-tight text-slate-950 font-medium">Frequently Asked<br />Questions</h2>
-          </div>
-          
-          <div className="md:w-2/3 flex flex-col gap-3 w-full">
-            {[
-              {
-                q: "Is Straviolabs suitable for early-stage AI startups?",
-                a: "Yes. We launched our site with Straviolabs while still early-stage, and it gave us a clear structure to explain our product without needing a full marketing team."
-              },
-              {
-                q: "Can Straviolabs be customized to match our brand?",
-                a: "Absolutely. We updated colors, typography, and visuals quickly, and the layout still felt cohesive and premium rather than like a generic template."
-              },
-              {
-                q: "Does Straviolabs work for technical AI products like agents or APIs?",
-                a: "Yes, our flexible architecture allows you to easily showcase highly technical features, interactive API docs, and agent simulations."
-              },
-              {
-                q: "How easy is Straviolabs to edit?",
-                a: "Straviolabs is built on modern, clean code with a component-based structure, making it incredibly intuitive for developers and designers alike to modify."
-              },
-              {
-                q: "Does Straviolabs actually help with conversions?",
-                a: "By providing a premium, highly trustworthy aesthetic, Straviolabs instantly elevates your brand perception, which is a critical factor in driving user conversions."
-              }
-            ].map((faq, idx) => (
-              <div 
-                key={idx} 
-                onClick={() => setOpenFaqIndex(openFaqIndex === idx ? null : idx)}
-                className={`transition-all duration-300 cursor-pointer overflow-hidden ${openFaqIndex === idx ? "bg-white border border-slate-200 shadow-sm rounded-xl" : "bg-slate-50 hover:bg-slate-100 rounded-xl"}`}
-              >
-                <div className="p-6 flex justify-between items-center">
-                  <h4 className="text-sm font-semibold text-slate-900 pr-8">{faq.q}</h4>
-                  <div className="shrink-0">
-                    <Plus className={`w-5 h-5 text-slate-900 transition-transform duration-300 ${openFaqIndex === idx ? "rotate-45" : ""}`} />
+            <div className="bg-white border border-slate-200/80 rounded-[2.5rem] shadow-[0_4px_20px_rgba(0,0,0,0.03)] overflow-hidden flex flex-col md:flex-row">
+              {/* Left: Visual/Graphic */}
+              <div className="md:w-1/2 bg-slate-50 p-12 relative flex items-center justify-center border-b md:border-b-0 md:border-r border-slate-200/80">
+                <div className="absolute inset-0 grid-bg-light opacity-60 pointer-events-none" />
+
+                <div className="relative z-10 w-full max-w-sm bg-white rounded-2xl shadow-lg border border-slate-200 p-6">
+                  <div className="flex items-center gap-3 mb-6">
+                    <div className="w-10 h-10 rounded-full bg-slate-100 flex items-center justify-center">
+                      <Wallet className="w-5 h-5 text-slate-600" />
+                    </div>
+                    <div>
+                      <div className="font-bold text-slate-900 text-sm">FintechCorp</div>
+                      <div className="text-xs text-slate-500">Financial Services</div>
+                    </div>
+                  </div>
+                  <div className="space-y-3">
+                    <div className="h-2 bg-slate-100 rounded-full w-full"></div>
+                    <div className="h-2 bg-slate-100 rounded-full w-4/5"></div>
+                    <div className="h-2 bg-slate-100 rounded-full w-2/3"></div>
+                  </div>
+                  <div className="mt-6 pt-6 border-t border-slate-100 flex justify-between items-center">
+                    <div className="text-3xl font-extrabold text-blue-600">+300%</div>
+                    <div className="text-xs font-semibold text-slate-500 uppercase tracking-wider">Conversion</div>
                   </div>
                 </div>
-                <div 
-                  className={`px-6 overflow-hidden transition-all duration-300 ease-in-out ${openFaqIndex === idx ? "max-h-40 pb-6 opacity-100" : "max-h-0 opacity-0"}`}
-                >
-                  <p className="text-sm text-slate-500 leading-relaxed">
-                    {faq.a}
-                  </p>
-                </div>
               </div>
-            ))}
-          </div>
-        </section>
 
-        {/* CTA bottom button */}
+              {/* Right: Content */}
+              <div className="md:w-1/2 p-12 md:p-16 flex flex-col justify-center">
+                <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-blue-50 text-blue-600 text-xs font-bold mb-6 w-fit">
+                  <TrendingUp className="w-4 h-4" /> Success Story
+                </div>
+                <h3 className="text-3xl font-bold text-slate-900 mb-4">
+                  How FintechCorp automated 80% of customer onboarding
+                </h3>
+                <p className="text-slate-500 leading-relaxed mb-8">
+                  By integrating our custom AI workflow, FintechCorp reduced their manual review process from 3 days to just 5 minutes, resulting in a massive boost to user acquisition and satisfaction.
+                </p>
+
+                <a href="#" className="inline-flex items-center gap-2 text-sm font-bold text-slate-900 hover:text-blue-600 transition-colors group">
+                  Read Full Story <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
+                </a>
+              </div>
+            </div>
+          </section>
+
+
+          {/* FAQ Section */}
+          <section className="max-w-[1200px] mx-auto pb-32 flex flex-col md:flex-row gap-16 items-start">
+            <div className="md:w-1/3 sticky top-32">
+              <span className="text-[11px] font-extrabold tracking-[0.2em] uppercase text-slate-900 mb-6 block">FAQ</span>
+              <h2 className="text-4xl md:text-5xl font-sans tracking-tight text-slate-950 font-medium">Frequently Asked<br />Questions</h2>
+            </div>
+
+            <div className="md:w-2/3 flex flex-col gap-3 w-full">
+              {[
+                {
+                  q: "Is Straviolabs suitable for early-stage AI startups?",
+                  a: "Yes. We launched our site with Straviolabs while still early-stage, and it gave us a clear structure to explain our product without needing a full marketing team."
+                },
+                {
+                  q: "Can Straviolabs be customized to match our brand?",
+                  a: "Absolutely. We updated colors, typography, and visuals quickly, and the layout still felt cohesive and premium rather than like a generic template."
+                },
+                {
+                  q: "Does Straviolabs work for technical AI products like agents or APIs?",
+                  a: "Yes, our flexible architecture allows you to easily showcase highly technical features, interactive API docs, and agent simulations."
+                },
+                {
+                  q: "How easy is Straviolabs to edit?",
+                  a: "Straviolabs is built on modern, clean code with a component-based structure, making it incredibly intuitive for developers and designers alike to modify."
+                },
+                {
+                  q: "Does Straviolabs actually help with conversions?",
+                  a: "By providing a premium, highly trustworthy aesthetic, Straviolabs instantly elevates your brand perception, which is a critical factor in driving user conversions."
+                }
+              ].map((faq, idx) => (
+                <div
+                  key={idx}
+                  onClick={() => setOpenFaqIndex(openFaqIndex === idx ? null : idx)}
+                  className={`transition-all duration-300 cursor-pointer overflow-hidden ${openFaqIndex === idx ? "bg-white border border-slate-200 shadow-sm rounded-xl" : "bg-slate-50 hover:bg-slate-100 rounded-xl"}`}
+                >
+                  <div className="p-6 flex justify-between items-center">
+                    <h4 className="text-sm font-semibold text-slate-900 pr-8">{faq.q}</h4>
+                    <div className="shrink-0">
+                      <Plus className={`w-5 h-5 text-slate-900 transition-transform duration-300 ${openFaqIndex === idx ? "rotate-45" : ""}`} />
+                    </div>
+                  </div>
+                  <div
+                    className={`px-6 overflow-hidden transition-all duration-300 ease-in-out ${openFaqIndex === idx ? "max-h-40 pb-6 opacity-100" : "max-h-0 opacity-0"}`}
+                  >
+                    <p className="text-sm text-slate-500 leading-relaxed">
+                      {faq.a}
+                    </p>
+                  </div>
+                </div>
+              ))}
+            </div>
+          </section>
+
+          {/* CTA bottom button */}
           <button className="bg-black text-white px-8 py-4 rounded-xl text-xs font-extrabold tracking-widest hover:bg-slate-900 transition-all flex items-center gap-2 mt-8 mx-auto shadow-md group cursor-pointer">
             TRANSFORM YOUR OPERATIONS <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
           </button>
