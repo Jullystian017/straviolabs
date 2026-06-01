@@ -60,6 +60,7 @@ import {
 } from "lucide-react";
 import dynamic from "next/dynamic";
 
+
 const Silk = dynamic(() => import("@/components/Silk"), { ssr: false });
 
 const comparisonItems = [
@@ -463,168 +464,168 @@ export default function Home() {
         <div className="max-w-[1400px] mx-auto -translate-y-36 mb-16 relative z-40 w-full px-8 md:px-12 hero-cta-btn">
           <div className="w-full h-[640px] bg-[#fdfdfd] rounded-2xl border border-slate-200 shadow-2xl overflow-hidden relative flex text-slate-800">
 
-              {/* Sidebar */}
-              <div className="w-[240px] h-full border-r border-slate-200 bg-[#fafafa] flex flex-col pt-6 pb-4">
-                {/* User Profile */}
-                <div className="flex items-center gap-3 px-6 mb-8">
-                  <div className="w-7 h-7 rounded-full bg-slate-800" />
-                  <span className="text-sm font-semibold">ByeWind</span>
-                </div>
+            {/* Sidebar */}
+            <div className="w-[240px] h-full border-r border-slate-200 bg-[#fafafa] flex flex-col pt-6 pb-4">
+              {/* User Profile */}
+              <div className="flex items-center gap-3 px-6 mb-8">
+                <div className="w-7 h-7 rounded-full bg-slate-800" />
+                <span className="text-sm font-semibold">ByeWind</span>
+              </div>
 
-                {/* Menu Section 1 */}
-                <div className="px-6 mb-6">
-                  <div className="flex gap-4 text-xs font-semibold text-slate-400 mb-4">
-                    <span className="text-slate-800">Favorites</span>
-                    <span>Recently</span>
-                  </div>
-                  <div className="space-y-3">
-                    <div className="flex items-center gap-2 text-sm text-slate-500 font-medium">
-                      <div className="w-1.5 h-1.5 rounded-full bg-slate-300" /> Overview
-                    </div>
-                    <div className="flex items-center gap-2 text-sm text-slate-500 font-medium">
-                      <div className="w-1.5 h-1.5 rounded-full bg-slate-300" /> Projects
-                    </div>
-                  </div>
+              {/* Menu Section 1 */}
+              <div className="px-6 mb-6">
+                <div className="flex gap-4 text-xs font-semibold text-slate-400 mb-4">
+                  <span className="text-slate-800">Favorites</span>
+                  <span>Recently</span>
                 </div>
-
-                {/* Menu Section 2 */}
-                <div className="px-6 flex-1">
-                  <div className="text-xs font-semibold text-slate-400 mb-4">Dashboards</div>
-                  <div className="space-y-1">
-                    <div className="flex items-center gap-3 px-3 py-2 bg-slate-200/50 rounded-lg text-sm font-semibold">
-                      <LayoutDashboard className="w-4 h-4" /> Default
-                    </div>
-                    <div className="flex items-center gap-3 px-3 py-2 text-slate-500 text-sm font-medium">
-                      <ShoppingCart className="w-4 h-4" /> eCommerce
-                    </div>
+                <div className="space-y-3">
+                  <div className="flex items-center gap-2 text-sm text-slate-500 font-medium">
+                    <div className="w-1.5 h-1.5 rounded-full bg-slate-300" /> Overview
+                  </div>
+                  <div className="flex items-center gap-2 text-sm text-slate-500 font-medium">
+                    <div className="w-1.5 h-1.5 rounded-full bg-slate-300" /> Projects
                   </div>
                 </div>
               </div>
 
-              {/* Main Content Area */}
-              <div className="flex-1 flex flex-col bg-white">
-                {/* Topbar */}
-                <div className="h-14 border-b border-slate-200 flex items-center justify-between px-6">
-                  <div className="flex items-center gap-4 text-sm font-medium text-slate-500">
-                    <Sidebar className="w-4 h-4" />
-                    <Star className="w-4 h-4" />
-                    <span className="text-slate-300">Dashboards / <span className="text-slate-800">Default</span></span>
+              {/* Menu Section 2 */}
+              <div className="px-6 flex-1">
+                <div className="text-xs font-semibold text-slate-400 mb-4">Dashboards</div>
+                <div className="space-y-1">
+                  <div className="flex items-center gap-3 px-3 py-2 bg-slate-200/50 rounded-lg text-sm font-semibold">
+                    <LayoutDashboard className="w-4 h-4" /> Default
                   </div>
-                  <div className="flex items-center gap-4">
-                    <div className="px-3 py-1.5 bg-slate-100 rounded-md text-xs text-slate-400 flex items-center gap-2 w-48">
-                      <Search className="w-3.5 h-3.5" /> Search <span className="ml-auto">⌘/</span>
-                    </div>
-                    <div className="flex items-center gap-3 text-slate-400">
-                      <Sun className="w-4 h-4" />
-                      <Clock className="w-4 h-4" />
-                      <Bell className="w-4 h-4" />
-                    </div>
+                  <div className="flex items-center gap-3 px-3 py-2 text-slate-500 text-sm font-medium">
+                    <ShoppingCart className="w-4 h-4" /> eCommerce
                   </div>
                 </div>
-
-                {/* Content */}
-                <div className="p-8">
-                  <h3 className="text-base font-semibold mb-6">Order List</h3>
-
-                  {/* Table Toolbar */}
-                  <div className="flex items-center justify-between mb-4">
-                    <div className="flex items-center gap-3 text-slate-400">
-                      <Plus className="w-4 h-4" />
-                      <Filter className="w-4 h-4" />
-                      <ArrowUpDown className="w-4 h-4" />
-                    </div>
-                    <div className="px-3 py-1.5 border border-slate-200 rounded-md text-xs text-slate-400 flex items-center gap-2 w-48">
-                      <Search className="w-3.5 h-3.5" /> Search
-                    </div>
-                  </div>
-
-                  {/* Table Header */}
-                  <div className="grid grid-cols-6 gap-4 text-xs font-semibold text-slate-400 pb-3 border-b border-slate-200 mb-4">
-                    <div className="col-span-1">Order ID</div>
-                    <div className="col-span-1">User</div>
-                    <div className="col-span-1">Project</div>
-                    <div className="col-span-1">Address</div>
-                    <div className="col-span-1">Date</div>
-                    <div className="col-span-1">Status</div>
-                  </div>
-
-                  {/* Table Row 1 */}
-                  <div className="grid grid-cols-6 gap-4 text-xs font-medium text-slate-600 py-4 border-b border-slate-100">
-                    <div className="col-span-1">#CM9801</div>
-                    <div className="col-span-1 flex items-center gap-2">
-                      <div className="w-5 h-5 rounded-full bg-slate-800" /> Natali Craig
-                    </div>
-                    <div className="col-span-1">Landing Page</div>
-                    <div className="col-span-1">Meadow Lane Oakland</div>
-                    <div className="col-span-1">Just now</div>
-                    <div className="col-span-1 text-blue-500 flex items-center gap-1.5">
-                      <div className="w-1.5 h-1.5 rounded-full bg-blue-500" /> In Progress
-                    </div>
-                  </div>
-
-                  {/* Table Row 2 */}
-                  <div className="grid grid-cols-6 gap-4 text-xs font-medium text-slate-600 py-4 border-b border-slate-100">
-                    <div className="col-span-1">#CM9802</div>
-                    <div className="col-span-1 flex items-center gap-2">
-                      <div className="w-5 h-5 rounded-full bg-slate-700" /> Kate Morrison
-                    </div>
-                    <div className="col-span-1">iOS App Design</div>
-                    <div className="col-span-1">8472 Spruce St</div>
-                    <div className="col-span-1">2 hours ago</div>
-                    <div className="col-span-1 text-emerald-500 flex items-center gap-1.5">
-                      <div className="w-1.5 h-1.5 rounded-full bg-emerald-500" /> Completed
-                    </div>
-                  </div>
-
-                  {/* Table Row 3 */}
-                  <div className="grid grid-cols-6 gap-4 text-xs font-medium text-slate-600 py-4 border-b border-slate-100">
-                    <div className="col-span-1">#CM9803</div>
-                    <div className="col-span-1 flex items-center gap-2">
-                      <div className="w-5 h-5 rounded-full bg-slate-600" /> Drew Cano
-                    </div>
-                    <div className="col-span-1">Web Platform</div>
-                    <div className="col-span-1">3948 Pine Rd</div>
-                    <div className="col-span-1">Yesterday</div>
-                    <div className="col-span-1 text-emerald-500 flex items-center gap-1.5">
-                      <div className="w-1.5 h-1.5 rounded-full bg-emerald-500" /> Completed
-                    </div>
-                  </div>
-
-                  {/* Table Row 4 */}
-                  <div className="grid grid-cols-6 gap-4 text-xs font-medium text-slate-600 py-4 border-b border-slate-100">
-                    <div className="col-span-1">#CM9804</div>
-                    <div className="col-span-1 flex items-center gap-2">
-                      <div className="w-5 h-5 rounded-full bg-slate-500" /> Orlando Diggs
-                    </div>
-                    <div className="col-span-1">Brand Identity</div>
-                    <div className="col-span-1">1029 Elm St</div>
-                    <div className="col-span-1">3 days ago</div>
-                    <div className="col-span-1 text-amber-500 flex items-center gap-1.5">
-                      <div className="w-1.5 h-1.5 rounded-full bg-amber-500" /> Pending
-                    </div>
-                  </div>
-
-                  {/* Table Row 5 */}
-                  <div className="grid grid-cols-6 gap-4 text-xs font-medium text-slate-600 py-4 border-b border-slate-100">
-                    <div className="col-span-1">#CM9805</div>
-                    <div className="col-span-1 flex items-center gap-2">
-                      <div className="w-5 h-5 rounded-full bg-slate-400" /> Andi Lane
-                    </div>
-                    <div className="col-span-1">Dashboard UI</div>
-                    <div className="col-span-1">5820 Oak Ave</div>
-                    <div className="col-span-1">1 week ago</div>
-                    <div className="col-span-1 text-emerald-500 flex items-center gap-1.5">
-                      <div className="w-1.5 h-1.5 rounded-full bg-emerald-500" /> Completed
-                    </div>
-                  </div>
-                </div>
-              </div>
-
-              {/* Framer badge mockup */}
-              <div className="absolute bottom-4 right-4 bg-white px-3 py-1.5 rounded shadow-lg text-xs font-semibold text-slate-800 flex items-center gap-2 border border-slate-100">
-                <div className="w-2.5 h-2.5 bg-black" style={{ clipPath: "polygon(0 0, 100% 0, 100% 100%, 50% 50%, 0 100%)" }} /> Made in Framer
               </div>
             </div>
+
+            {/* Main Content Area */}
+            <div className="flex-1 flex flex-col bg-white">
+              {/* Topbar */}
+              <div className="h-14 border-b border-slate-200 flex items-center justify-between px-6">
+                <div className="flex items-center gap-4 text-sm font-medium text-slate-500">
+                  <Sidebar className="w-4 h-4" />
+                  <Star className="w-4 h-4" />
+                  <span className="text-slate-300">Dashboards / <span className="text-slate-800">Default</span></span>
+                </div>
+                <div className="flex items-center gap-4">
+                  <div className="px-3 py-1.5 bg-slate-100 rounded-md text-xs text-slate-400 flex items-center gap-2 w-48">
+                    <Search className="w-3.5 h-3.5" /> Search <span className="ml-auto">⌘/</span>
+                  </div>
+                  <div className="flex items-center gap-3 text-slate-400">
+                    <Sun className="w-4 h-4" />
+                    <Clock className="w-4 h-4" />
+                    <Bell className="w-4 h-4" />
+                  </div>
+                </div>
+              </div>
+
+              {/* Content */}
+              <div className="p-8">
+                <h3 className="text-base font-semibold mb-6">Order List</h3>
+
+                {/* Table Toolbar */}
+                <div className="flex items-center justify-between mb-4">
+                  <div className="flex items-center gap-3 text-slate-400">
+                    <Plus className="w-4 h-4" />
+                    <Filter className="w-4 h-4" />
+                    <ArrowUpDown className="w-4 h-4" />
+                  </div>
+                  <div className="px-3 py-1.5 border border-slate-200 rounded-md text-xs text-slate-400 flex items-center gap-2 w-48">
+                    <Search className="w-3.5 h-3.5" /> Search
+                  </div>
+                </div>
+
+                {/* Table Header */}
+                <div className="grid grid-cols-6 gap-4 text-xs font-semibold text-slate-400 pb-3 border-b border-slate-200 mb-4">
+                  <div className="col-span-1">Order ID</div>
+                  <div className="col-span-1">User</div>
+                  <div className="col-span-1">Project</div>
+                  <div className="col-span-1">Address</div>
+                  <div className="col-span-1">Date</div>
+                  <div className="col-span-1">Status</div>
+                </div>
+
+                {/* Table Row 1 */}
+                <div className="grid grid-cols-6 gap-4 text-xs font-medium text-slate-600 py-4 border-b border-slate-100">
+                  <div className="col-span-1">#CM9801</div>
+                  <div className="col-span-1 flex items-center gap-2">
+                    <div className="w-5 h-5 rounded-full bg-slate-800" /> Natali Craig
+                  </div>
+                  <div className="col-span-1">Landing Page</div>
+                  <div className="col-span-1">Meadow Lane Oakland</div>
+                  <div className="col-span-1">Just now</div>
+                  <div className="col-span-1 text-blue-500 flex items-center gap-1.5">
+                    <div className="w-1.5 h-1.5 rounded-full bg-blue-500" /> In Progress
+                  </div>
+                </div>
+
+                {/* Table Row 2 */}
+                <div className="grid grid-cols-6 gap-4 text-xs font-medium text-slate-600 py-4 border-b border-slate-100">
+                  <div className="col-span-1">#CM9802</div>
+                  <div className="col-span-1 flex items-center gap-2">
+                    <div className="w-5 h-5 rounded-full bg-slate-700" /> Kate Morrison
+                  </div>
+                  <div className="col-span-1">iOS App Design</div>
+                  <div className="col-span-1">8472 Spruce St</div>
+                  <div className="col-span-1">2 hours ago</div>
+                  <div className="col-span-1 text-emerald-500 flex items-center gap-1.5">
+                    <div className="w-1.5 h-1.5 rounded-full bg-emerald-500" /> Completed
+                  </div>
+                </div>
+
+                {/* Table Row 3 */}
+                <div className="grid grid-cols-6 gap-4 text-xs font-medium text-slate-600 py-4 border-b border-slate-100">
+                  <div className="col-span-1">#CM9803</div>
+                  <div className="col-span-1 flex items-center gap-2">
+                    <div className="w-5 h-5 rounded-full bg-slate-600" /> Drew Cano
+                  </div>
+                  <div className="col-span-1">Web Platform</div>
+                  <div className="col-span-1">3948 Pine Rd</div>
+                  <div className="col-span-1">Yesterday</div>
+                  <div className="col-span-1 text-emerald-500 flex items-center gap-1.5">
+                    <div className="w-1.5 h-1.5 rounded-full bg-emerald-500" /> Completed
+                  </div>
+                </div>
+
+                {/* Table Row 4 */}
+                <div className="grid grid-cols-6 gap-4 text-xs font-medium text-slate-600 py-4 border-b border-slate-100">
+                  <div className="col-span-1">#CM9804</div>
+                  <div className="col-span-1 flex items-center gap-2">
+                    <div className="w-5 h-5 rounded-full bg-slate-500" /> Orlando Diggs
+                  </div>
+                  <div className="col-span-1">Brand Identity</div>
+                  <div className="col-span-1">1029 Elm St</div>
+                  <div className="col-span-1">3 days ago</div>
+                  <div className="col-span-1 text-amber-500 flex items-center gap-1.5">
+                    <div className="w-1.5 h-1.5 rounded-full bg-amber-500" /> Pending
+                  </div>
+                </div>
+
+                {/* Table Row 5 */}
+                <div className="grid grid-cols-6 gap-4 text-xs font-medium text-slate-600 py-4 border-b border-slate-100">
+                  <div className="col-span-1">#CM9805</div>
+                  <div className="col-span-1 flex items-center gap-2">
+                    <div className="w-5 h-5 rounded-full bg-slate-400" /> Andi Lane
+                  </div>
+                  <div className="col-span-1">Dashboard UI</div>
+                  <div className="col-span-1">5820 Oak Ave</div>
+                  <div className="col-span-1">1 week ago</div>
+                  <div className="col-span-1 text-emerald-500 flex items-center gap-1.5">
+                    <div className="w-1.5 h-1.5 rounded-full bg-emerald-500" /> Completed
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            {/* Framer badge mockup */}
+            <div className="absolute bottom-4 right-4 bg-white px-3 py-1.5 rounded shadow-lg text-xs font-semibold text-slate-800 flex items-center gap-2 border border-slate-100">
+              <div className="w-2.5 h-2.5 bg-black" style={{ clipPath: "polygon(0 0, 100% 0, 100% 100%, 50% 50%, 0 100%)" }} /> Made in Framer
+            </div>
+          </div>
         </div>
 
         {/* Trusted By Marquee Section */}
@@ -1017,14 +1018,139 @@ export default function Home() {
               ))}
             </div>
           </section>
-
-          {/* CTA bottom button */}
-          <button className="bg-black text-white px-8 py-4 rounded-xl text-xs font-extrabold tracking-widest hover:bg-slate-900 transition-all flex items-center gap-2 mt-8 mx-auto shadow-md group cursor-pointer">
-            TRANSFORM YOUR OPERATIONS <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
-          </button>
         </section>
-
       </div>
+
+      {/* Bottom CTA Section */}
+      <section className="relative w-full overflow-hidden py-32 bg-slate-950 flex flex-col items-center justify-center text-center">
+        {/* Background Interactive Glow */}
+        <div className="absolute inset-0 z-0 opacity-100 pointer-events-none">
+          <Silk
+            speed={3}
+            scale={0.8}
+            color="#2563eb"
+            noiseIntensity={0.8}
+            rotation={0}
+          />
+        </div>
+        <div className="absolute inset-0 z-[1] grid-bg opacity-30 pointer-events-none" />
+
+        <div className="relative z-10 max-w-[1000px] px-6 flex flex-col items-center">
+          <div className="mb-6 text-[11px] font-bold tracking-[0.15em] text-white/80 uppercase">
+            AI & SAAS INFRASTRUCTURE
+          </div>
+          <h2 className="text-4xl md:text-5xl lg:text-[54px] font-semibold tracking-tight text-white leading-[1.1] mb-10 max-w-4xl">
+            Build software that feels precise, <br className="hidden md:block" /> powerful, and dependable.
+          </h2>
+
+          <div className="flex flex-row items-center justify-center gap-4">
+            <a
+              href="#get-started"
+              className="px-6 py-3.5 text-xs font-bold tracking-wider rounded text-slate-950 bg-white hover:bg-slate-200 transition-all shadow-lg flex items-center gap-2"
+            >
+              GET STARTED <ArrowRight className="w-3.5 h-3.5" />
+            </a>
+            <a
+              href="#book-demo"
+              className="px-6 py-3.5 text-xs font-bold tracking-wider rounded text-white bg-white/5 border border-white/10 hover:bg-white/10 transition-all flex items-center gap-2"
+            >
+              BOOK A DEMO <ArrowRight className="w-3.5 h-3.5" />
+            </a>
+          </div>
+        </div>
+      </section>
+
+      {/* Footer Section */}
+      <footer className="bg-white text-slate-900 px-6 md:px-12 py-24 border-t border-slate-100 z-30 relative w-full">
+        <div className="max-w-[1400px] mx-auto grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-8">
+
+          {/* Brand Info */}
+          <div className="lg:col-span-5 flex flex-col items-start">
+            <div className="flex items-center space-x-3 mb-6">
+              <img src="/straviolabs.png" alt="Straviolabs Logo" className="w-8 h-8 object-contain brightness-0" />
+              <span className="text-xl font-bold tracking-tight text-slate-900">
+                Straviolabs
+              </span>
+            </div>
+            <p className="text-sm text-slate-500 leading-relaxed mb-8 max-w-sm">
+              Sales, support, operations, and data - handled 24/7 by custom AI agents.
+            </p>
+
+            {/* Social Icons */}
+            <div className="flex items-center gap-3">
+              <a href="#" className="w-9 h-9 rounded-full border border-slate-200/80 flex items-center justify-center text-slate-600 hover:text-slate-900 hover:bg-slate-50 transition-all">
+                <svg className="w-4 h-4 fill-current" viewBox="0 0 24 24">
+                  <path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z" />
+                </svg>
+              </a>
+              <a href="#" className="w-9 h-9 rounded-full border border-slate-200/80 flex items-center justify-center text-slate-600 hover:text-slate-900 hover:bg-slate-50 transition-all">
+                <svg className="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                  <rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect>
+                  <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
+                  <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line>
+                </svg>
+              </a>
+              <a href="#" className="w-9 h-9 rounded-full border border-slate-200/80 flex items-center justify-center text-slate-600 hover:text-slate-900 hover:bg-slate-50 transition-all">
+                <svg className="w-4 h-4 fill-current" viewBox="0 0 24 24">
+                  <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.225 0z" />
+                </svg>
+              </a>
+              <a href="#" className="w-9 h-9 rounded-full border border-slate-200/80 flex items-center justify-center text-slate-600 hover:text-slate-900 hover:bg-slate-50 transition-all">
+                <svg className="w-4 h-4 fill-current" viewBox="0 0 24 24">
+                  <path d="M23.498 6.163a3.003 3.003 0 0 0-2.11-2.11C19.525 3.545 12 3.545 12 3.545s-7.525 0-9.388.508a3.003 3.003 0 0 0-2.11 2.11C0 8.027 0 12 0 12s0 3.973.502 5.837a3.003 3.003 0 0 0 2.11 2.11C4.475 20.455 12 20.455 12 20.455s7.525 0 9.388-.508a3.003 3.003 0 0 0 2.11-2.11C24 15.973 24 12 24 12s0-3.973-.502-5.837zM9.545 15.568V8.432L15.818 12l-6.273 3.568z" />
+                </svg>
+              </a>
+            </div>
+          </div>
+
+          {/* Footer Navigation Columns */}
+          <div className="lg:col-span-7 grid grid-cols-2 md:grid-cols-3 gap-8">
+            {/* Column 1: Company */}
+            <div className="flex flex-col items-start gap-4">
+              <h4 className="text-sm font-bold text-slate-900 tracking-wider">Company</h4>
+              <div className="flex flex-col gap-3 text-sm text-slate-500 font-medium">
+                <a href="#" className="hover:text-slate-900 transition-colors">Platform</a>
+                <a href="#" className="hover:text-slate-900 transition-colors">Pricing</a>
+                <a href="#" className="hover:text-slate-900 transition-colors">About</a>
+                <a href="#" className="hover:text-slate-900 transition-colors">Blog</a>
+                <a href="#" className="hover:text-slate-900 transition-colors">Privacy Policy</a>
+                <a href="#" className="hover:text-slate-900 transition-colors">Terms & Conditions</a>
+              </div>
+            </div>
+
+            {/* Column 2: Solutions */}
+            <div className="flex flex-col items-start gap-4">
+              <h4 className="text-sm font-bold text-slate-900 tracking-wider">Solutions</h4>
+              <div className="flex flex-col gap-3 text-sm text-slate-500 font-medium">
+                <a href="#" className="hover:text-slate-900 transition-colors">AI Startups</a>
+                <a href="#" className="hover:text-slate-900 transition-colors">SaaS Platforms</a>
+                <a href="#" className="hover:text-slate-900 transition-colors">B2B Software</a>
+                <a href="#" className="hover:text-slate-900 transition-colors">Internal Tools & Automation</a>
+                <a href="#" className="hover:text-slate-900 transition-colors">Data & Intelligence Platforms</a>
+                <a href="#" className="hover:text-slate-900 transition-colors">AI Agents</a>
+              </div>
+            </div>
+
+            {/* Column 3: Get in Touch */}
+            <div className="flex flex-col items-start gap-4 col-span-2 md:col-span-1">
+              <h4 className="text-sm font-bold text-slate-900 tracking-wider">Get in touch</h4>
+              <div className="flex flex-col gap-3 text-sm text-slate-500 font-medium">
+                <a href="#" className="hover:text-slate-900 transition-colors">Contact</a>
+                <a href="#" className="hover:text-slate-900 transition-colors">Book a call</a>
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+        {/* Copyright Bar */}
+        <div className="max-w-[1400px] mx-auto border-t border-slate-100 mt-20 pt-8 flex flex-col sm:flex-row justify-between items-center gap-4 text-xs text-slate-400 font-medium">
+          <span>&copy; 2026 Straviolabs. All rights reserved.</span>
+          <span>
+            Design by <span className="font-bold text-slate-900">Wize</span>
+          </span>
+        </div>
+      </footer>
     </div>
   );
 }
