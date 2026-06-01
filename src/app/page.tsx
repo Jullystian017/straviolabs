@@ -236,8 +236,8 @@ export default function Home() {
         {/* Header/Navbar */}
         <div className={`fixed top-0 left-0 right-0 z-50 w-full transition-all duration-500 ease-[cubic-bezier(0.23,1,0.32,1)] ${isScrolled ? "pt-4 px-4 pointer-events-none" : ""} nav-item`}>
           <nav className={`mx-auto flex items-center justify-between transition-all duration-500 pointer-events-auto ${isScrolled
-            ? "max-w-[1050px] bg-white rounded-2xl shadow-[0_8px_30px_rgb(0,0,0,0.12)] px-6 py-2 border border-slate-200/50"
-            : "max-w-[1200px] px-8 md:px-12 py-6 bg-transparent"
+            ? "max-w-[1250px] bg-white rounded-2xl shadow-[0_8px_30px_rgb(0,0,0,0.12)] px-6 py-2 border border-slate-200/50"
+            : "max-w-[1400px] px-8 md:px-12 py-6 bg-transparent"
             }`}>
             {/* Logo */}
             <div className="flex items-center space-x-3">
@@ -422,24 +422,24 @@ export default function Home() {
         </div>
 
         {/* Hero Section */}
-        <header className="relative z-10 flex-1 flex flex-col justify-center mx-auto max-w-[1200px] w-full px-8 md:px-12 pt-32 pb-0">
+        <header className="relative z-10 flex-1 flex flex-col justify-center mx-auto max-w-[1400px] w-full px-8 md:px-12 pt-36 pb-32">
 
           {/* Two Column Layout */}
-          <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-8 items-center mb-16">
+          <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-center mb-16">
 
             {/* Left Column (Heading) */}
-            <div className="lg:col-span-7 flex flex-col items-start text-left">
+            <div className="lg:col-span-8 flex flex-col items-start text-left">
               <div className="mb-6 text-[11px] font-bold tracking-[0.15em] text-white/80 hero-badge uppercase">
                 AI & SAAS INFRASTRUCTURE
               </div>
-              <h1 className="text-5xl md:text-7xl lg:text-[76px] font-semibold tracking-tight text-white leading-[1.05] hero-title">
-                Build software that feels precise and dependable.
+              <h1 className="text-5xl md:text-7xl lg:text-[72px] font-semibold tracking-tight text-white leading-[1.05] hero-title">
+                We build precise software <br className="hidden lg:block" /> to scale your vision.
               </h1>
             </div>
 
             {/* Right Column (Text & Buttons) */}
-            <div className="lg:col-span-5 flex flex-col items-start lg:pl-10">
-              <p className="text-lg text-slate-300 leading-relaxed mb-8 max-w-md hero-cta-btn">
+            <div className="lg:col-span-4 flex flex-col items-start lg:pl-8">
+              <p className="text-base text-slate-400 leading-relaxed mb-8 max-w-sm hero-cta-btn">
                 Steel provides a structured framework for presenting AI and software platforms built around scale, precision, and reliability.
               </p>
 
@@ -453,10 +453,15 @@ export default function Home() {
               </div>
             </div>
           </div>
+        </header>
+      </div>
 
-          {/* Dashboard Graphic Mockup */}
-          <div className="w-full relative z-20 flex justify-center hero-cta-btn">
-            <div className="w-full h-[500px] bg-[#fdfdfd] rounded-t-xl border-t border-x border-white/20 shadow-2xl overflow-hidden relative flex text-slate-800">
+      {/* Clean light theme sections */}
+      <div className="relative bg-white text-slate-900 pt-0 pb-32 px-6 md:px-12 z-30">
+
+        {/* Dashboard Graphic Mockup */}
+        <div className="max-w-[1400px] mx-auto -translate-y-36 mb-16 relative z-40 w-full px-8 md:px-12 hero-cta-btn">
+          <div className="w-full h-[640px] bg-[#fdfdfd] rounded-2xl border border-slate-200 shadow-2xl overflow-hidden relative flex text-slate-800">
 
               {/* Sidebar */}
               <div className="w-[240px] h-full border-r border-slate-200 bg-[#fafafa] flex flex-col pt-6 pb-4">
@@ -544,7 +549,7 @@ export default function Home() {
                   </div>
 
                   {/* Table Row 1 */}
-                  <div className="grid grid-cols-6 gap-4 text-xs font-medium text-slate-600 pb-4 border-b border-slate-100">
+                  <div className="grid grid-cols-6 gap-4 text-xs font-medium text-slate-600 py-4 border-b border-slate-100">
                     <div className="col-span-1">#CM9801</div>
                     <div className="col-span-1 flex items-center gap-2">
                       <div className="w-5 h-5 rounded-full bg-slate-800" /> Natali Craig
@@ -556,6 +561,62 @@ export default function Home() {
                       <div className="w-1.5 h-1.5 rounded-full bg-blue-500" /> In Progress
                     </div>
                   </div>
+
+                  {/* Table Row 2 */}
+                  <div className="grid grid-cols-6 gap-4 text-xs font-medium text-slate-600 py-4 border-b border-slate-100">
+                    <div className="col-span-1">#CM9802</div>
+                    <div className="col-span-1 flex items-center gap-2">
+                      <div className="w-5 h-5 rounded-full bg-slate-700" /> Kate Morrison
+                    </div>
+                    <div className="col-span-1">iOS App Design</div>
+                    <div className="col-span-1">8472 Spruce St</div>
+                    <div className="col-span-1">2 hours ago</div>
+                    <div className="col-span-1 text-emerald-500 flex items-center gap-1.5">
+                      <div className="w-1.5 h-1.5 rounded-full bg-emerald-500" /> Completed
+                    </div>
+                  </div>
+
+                  {/* Table Row 3 */}
+                  <div className="grid grid-cols-6 gap-4 text-xs font-medium text-slate-600 py-4 border-b border-slate-100">
+                    <div className="col-span-1">#CM9803</div>
+                    <div className="col-span-1 flex items-center gap-2">
+                      <div className="w-5 h-5 rounded-full bg-slate-600" /> Drew Cano
+                    </div>
+                    <div className="col-span-1">Web Platform</div>
+                    <div className="col-span-1">3948 Pine Rd</div>
+                    <div className="col-span-1">Yesterday</div>
+                    <div className="col-span-1 text-emerald-500 flex items-center gap-1.5">
+                      <div className="w-1.5 h-1.5 rounded-full bg-emerald-500" /> Completed
+                    </div>
+                  </div>
+
+                  {/* Table Row 4 */}
+                  <div className="grid grid-cols-6 gap-4 text-xs font-medium text-slate-600 py-4 border-b border-slate-100">
+                    <div className="col-span-1">#CM9804</div>
+                    <div className="col-span-1 flex items-center gap-2">
+                      <div className="w-5 h-5 rounded-full bg-slate-500" /> Orlando Diggs
+                    </div>
+                    <div className="col-span-1">Brand Identity</div>
+                    <div className="col-span-1">1029 Elm St</div>
+                    <div className="col-span-1">3 days ago</div>
+                    <div className="col-span-1 text-amber-500 flex items-center gap-1.5">
+                      <div className="w-1.5 h-1.5 rounded-full bg-amber-500" /> Pending
+                    </div>
+                  </div>
+
+                  {/* Table Row 5 */}
+                  <div className="grid grid-cols-6 gap-4 text-xs font-medium text-slate-600 py-4 border-b border-slate-100">
+                    <div className="col-span-1">#CM9805</div>
+                    <div className="col-span-1 flex items-center gap-2">
+                      <div className="w-5 h-5 rounded-full bg-slate-400" /> Andi Lane
+                    </div>
+                    <div className="col-span-1">Dashboard UI</div>
+                    <div className="col-span-1">5820 Oak Ave</div>
+                    <div className="col-span-1">1 week ago</div>
+                    <div className="col-span-1 text-emerald-500 flex items-center gap-1.5">
+                      <div className="w-1.5 h-1.5 rounded-full bg-emerald-500" /> Completed
+                    </div>
+                  </div>
                 </div>
               </div>
 
@@ -564,14 +625,7 @@ export default function Home() {
                 <div className="w-2.5 h-2.5 bg-black" style={{ clipPath: "polygon(0 0, 100% 0, 100% 100%, 50% 50%, 0 100%)" }} /> Made in Framer
               </div>
             </div>
-          </div>
-        </header>
-
-      </div>
-
-      {/* Clean light theme sections */}
-      <div className="relative bg-white text-slate-900 py-32 px-6 md:px-12 z-30">
-
+        </div>
 
         {/* Trusted By Marquee Section */}
         <section className="max-w-[1200px] mx-auto mb-32 border-b border-slate-100 pb-20 overflow-hidden">
